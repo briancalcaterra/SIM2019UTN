@@ -1,0 +1,10 @@
+c:\users\brian\documents\visual studio 2013\Projects\TPN1_SIM\TPN1_SIM\bin\Debug\TPN1_SIM.exe.config
+C:\Users\Brian\Documents\Visual Studio 2013\Projects\TPN1_SIM\TPN1_SIM\bin\Debug\TPN1_SIM.exe
+C:\Users\Brian\Documents\Visual Studio 2013\Projects\TPN1_SIM\TPN1_SIM\bin\Debug\TPN1_SIM.pdb
+C:\Users\Brian\Documents\Visual Studio 2013\Projects\TPN1_SIM\TPN1_SIM\bin\Debug\TPN1_SIM.xml
+C:\Users\Brian\Documents\Visual Studio 2013\Projects\TPN1_SIM\TPN1_SIM\obj\Debug\TPN1_SIM.Form1.resources
+C:\Users\Brian\Documents\Visual Studio 2013\Projects\TPN1_SIM\TPN1_SIM\obj\Debug\TPN1_SIM.Resources.resources
+C:\Users\Brian\Documents\Visual Studio 2013\Projects\TPN1_SIM\TPN1_SIM\obj\Debug\TPN1_SIM.vbproj.GenerateResource.Cache
+C:\Users\Brian\Documents\Visual Studio 2013\Projects\TPN1_SIM\TPN1_SIM\obj\Debug\TPN1_SIM.exe
+C:\Users\Brian\Documents\Visual Studio 2013\Projects\TPN1_SIM\TPN1_SIM\obj\Debug\TPN1_SIM.xml
+C:\Users\Brian\Documents\Visual Studio 2013\Projects\TPN1_SIM\TPN1_SIM\obj\Debug\TPN1_SIM.pdb
