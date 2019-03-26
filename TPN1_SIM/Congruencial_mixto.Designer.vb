@@ -29,6 +29,8 @@ Partial Class Congruencial_mixto
         Me.txt_semilla = New System.Windows.Forms.TextBox()
         Me.txt_exponente = New System.Windows.Forms.TextBox()
         Me.grilla_numeros = New System.Windows.Forms.DataGridView()
+        Me.posicion = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.rnd = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txt_constante_c = New System.Windows.Forms.TextBox()
@@ -37,8 +39,6 @@ Partial Class Congruencial_mixto
         Me.txt_constante_a = New System.Windows.Forms.TextBox()
         Me.txt_intervalos = New System.Windows.Forms.TextBox()
         Me.btn_cargar_vector = New System.Windows.Forms.Button()
-        Me.posicion = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.rnd = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.grilla_numeros, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -47,7 +47,7 @@ Partial Class Congruencial_mixto
         Me.btn_cargar_aleatorios.Location = New System.Drawing.Point(122, 366)
         Me.btn_cargar_aleatorios.Name = "btn_cargar_aleatorios"
         Me.btn_cargar_aleatorios.Size = New System.Drawing.Size(140, 26)
-        Me.btn_cargar_aleatorios.TabIndex = 6
+        Me.btn_cargar_aleatorios.TabIndex = 7
         Me.btn_cargar_aleatorios.Text = "Mostrar_grilla"
         Me.btn_cargar_aleatorios.UseVisualStyleBackColor = True
         '
@@ -100,6 +100,16 @@ Partial Class Congruencial_mixto
         Me.grilla_numeros.Name = "grilla_numeros"
         Me.grilla_numeros.Size = New System.Drawing.Size(241, 350)
         Me.grilla_numeros.TabIndex = 7
+        '
+        'posicion
+        '
+        Me.posicion.HeaderText = "Posicion"
+        Me.posicion.Name = "posicion"
+        '
+        'rnd
+        '
+        Me.rnd.HeaderText = "rnd"
+        Me.rnd.Name = "rnd"
         '
         'Label4
         '
@@ -163,21 +173,11 @@ Partial Class Congruencial_mixto
         Me.btn_cargar_vector.Location = New System.Drawing.Point(122, 318)
         Me.btn_cargar_vector.Name = "btn_cargar_vector"
         Me.btn_cargar_vector.Size = New System.Drawing.Size(140, 23)
-        Me.btn_cargar_vector.TabIndex = 8
+        Me.btn_cargar_vector.TabIndex = 6
         Me.btn_cargar_vector.Text = "Cargar_vector"
         Me.btn_cargar_vector.UseVisualStyleBackColor = True
         '
-        'posicion
-        '
-        Me.posicion.HeaderText = "Posicion"
-        Me.posicion.Name = "posicion"
-        '
-        'rnd
-        '
-        Me.rnd.HeaderText = "rnd"
-        Me.rnd.Name = "rnd"
-        '
-        'Form1
+        'Congruencial_mixto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -197,7 +197,7 @@ Partial Class Congruencial_mixto
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btn_cargar_aleatorios)
-        Me.Name = "Form1"
+        Me.Name = "Congruencial_mixto"
         Me.Text = "Form1"
         CType(Me.grilla_numeros, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

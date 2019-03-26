@@ -1,5 +1,6 @@
 ﻿
 Public Class Congruencial_mixto
+    'creacion del vector para guardar los numeros aleatorios 
     Dim numeros(20) As Decimal
     Dim i As Integer
     'a)	Realizar un programa que genere una serie de 20 números aleatorios entre 0 y 0,9999 (4 dígitos decimales) a partir de un valor numérico indicado como raíz, 
@@ -18,6 +19,12 @@ Public Class Congruencial_mixto
 
     Private Sub btn_cargar_vector_Click(sender As Object, e As EventArgs) Handles btn_cargar_vector.Click
         Dim xo, g, k, c, m, a As Integer
+        'Declaracion de variables que contendran a los valores ingresados por el usuario
+        'xo: valor semilla
+        'g: exponente para calcular m
+        'k: cantidad de intervalos
+        'c: constante aditiva
+        'a: constante multiplicativa
         xo = Me.txt_semilla.Text
         g = Me.txt_exponente.Text
         k = Me.txt_intervalos.Text
@@ -27,28 +34,26 @@ Public Class Congruencial_mixto
         a = 1 + (4 * k)
         Me.txt_constante_a.Text = a
         i = 1
-
+        'ciclo para cargar el arreglo
         Do While (i <= 20)
-
             Dim x_mas_1 As Integer
+            'aca se calcula el valor de (x + 1), como parametro se ingresa el valor semilla
             x_mas_1 = (a * xo + c) Mod (m)
             Dim rnd As Decimal
             rnd = (Convert.ToDecimal(x_mas_1 / (m - 1)))
             rnd = Math.Round(rnd, 4)
             numeros(i) = rnd
             i = i + 1
+            'el valor semilla se convierte en (x+1) y se utiliza para la siguiente iteracion
             xo = x_mas_1
-
         Loop
-
-
     End Sub
     Private Sub btn_cargar_aleatorios_Click(sender As Object, e As EventArgs) Handles btn_cargar_aleatorios.Click
+        'Subrutina que carga en la grilla los numeros pseudo-aleatorios almacenados en el arreglo
         i = 1
         Me.grilla_numeros.Rows.Clear()
         Do While (i <= 20)
             grilla_numeros.Rows.Add(i, numeros(i))
-            'grilla_numeros.Rows(i).Cells(1).Value = numeros(i)
             i = i + 1
         Loop
 
