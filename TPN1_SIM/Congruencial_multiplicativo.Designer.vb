@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Congruencial_mixto
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+Partial Class Congruencial_multiplicativo
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,20 +20,18 @@ Partial Class Congruencial_mixto
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Congruencial_mixto))
-        Me.btn_cargar_aleatorios = New System.Windows.Forms.Button()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Congruencial_multiplicativo))
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.grilla_numeros = New System.Windows.Forms.DataGridView()
         Me.posicion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.rnd = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.btn_limpiar = New System.Windows.Forms.Button()
-        Me.txt_cant_muestras = New System.Windows.Forms.TextBox()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.btn_siguiente = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.txt_constante_a = New System.Windows.Forms.TextBox()
         Me.txt_periodo_max = New System.Windows.Forms.TextBox()
+        Me.txt_cant_muestras = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.txt_constante_c = New System.Windows.Forms.TextBox()
         Me.txt_exponente = New System.Windows.Forms.TextBox()
         Me.txt_intervalos = New System.Windows.Forms.TextBox()
@@ -44,37 +42,34 @@ Partial Class Congruencial_mixto
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.btn_siguiente = New System.Windows.Forms.Button()
+        Me.btn_limpiar = New System.Windows.Forms.Button()
+        Me.btn_cargar_aleatorios = New System.Windows.Forms.Button()
+        Me.GroupBox2.SuspendLayout()
         CType(Me.grilla_numeros, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
-        Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
-        'btn_cargar_aleatorios
+        'GroupBox2
         '
-        Me.btn_cargar_aleatorios.BackColor = System.Drawing.Color.White
-        Me.btn_cargar_aleatorios.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_cargar_aleatorios.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_cargar_aleatorios.ForeColor = System.Drawing.Color.DeepSkyBlue
-        Me.btn_cargar_aleatorios.Image = CType(resources.GetObject("btn_cargar_aleatorios.Image"), System.Drawing.Image)
-        Me.btn_cargar_aleatorios.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_cargar_aleatorios.Location = New System.Drawing.Point(37, 321)
-        Me.btn_cargar_aleatorios.Margin = New System.Windows.Forms.Padding(4)
-        Me.btn_cargar_aleatorios.Name = "btn_cargar_aleatorios"
-        Me.btn_cargar_aleatorios.Size = New System.Drawing.Size(175, 66)
-        Me.btn_cargar_aleatorios.TabIndex = 7
-        Me.btn_cargar_aleatorios.Text = "Mostrar Grilla"
-        Me.btn_cargar_aleatorios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_cargar_aleatorios.UseVisualStyleBackColor = False
+        Me.GroupBox2.Controls.Add(Me.grilla_numeros)
+        Me.GroupBox2.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox2.ForeColor = System.Drawing.Color.DeepSkyBlue
+        Me.GroupBox2.Location = New System.Drawing.Point(472, 12)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(364, 539)
+        Me.GroupBox2.TabIndex = 17
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "Lista de Numeros Aleatorios:"
         '
         'grilla_numeros
         '
         Me.grilla_numeros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.grilla_numeros.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.posicion, Me.rnd})
-        Me.grilla_numeros.Location = New System.Drawing.Point(19, 27)
+        Me.grilla_numeros.Location = New System.Drawing.Point(28, 25)
         Me.grilla_numeros.Margin = New System.Windows.Forms.Padding(4)
         Me.grilla_numeros.Name = "grilla_numeros"
-        Me.grilla_numeros.Size = New System.Drawing.Size(460, 550)
+        Me.grilla_numeros.Size = New System.Drawing.Size(315, 505)
         Me.grilla_numeros.TabIndex = 10
         '
         'posicion
@@ -86,61 +81,6 @@ Partial Class Congruencial_mixto
         '
         Me.rnd.HeaderText = "rnd"
         Me.rnd.Name = "rnd"
-        '
-        'btn_limpiar
-        '
-        Me.btn_limpiar.BackColor = System.Drawing.Color.White
-        Me.btn_limpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_limpiar.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_limpiar.ForeColor = System.Drawing.Color.DeepSkyBlue
-        Me.btn_limpiar.Image = CType(resources.GetObject("btn_limpiar.Image"), System.Drawing.Image)
-        Me.btn_limpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_limpiar.Location = New System.Drawing.Point(132, 395)
-        Me.btn_limpiar.Margin = New System.Windows.Forms.Padding(4)
-        Me.btn_limpiar.Name = "btn_limpiar"
-        Me.btn_limpiar.Size = New System.Drawing.Size(160, 69)
-        Me.btn_limpiar.TabIndex = 9
-        Me.btn_limpiar.Text = "Limpiar"
-        Me.btn_limpiar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_limpiar.UseVisualStyleBackColor = False
-        '
-        'txt_cant_muestras
-        '
-        Me.txt_cant_muestras.Font = New System.Drawing.Font("Arial Narrow", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_cant_muestras.Location = New System.Drawing.Point(155, 35)
-        Me.txt_cant_muestras.Margin = New System.Windows.Forms.Padding(4)
-        Me.txt_cant_muestras.Name = "txt_cant_muestras"
-        Me.txt_cant_muestras.Size = New System.Drawing.Size(160, 27)
-        Me.txt_cant_muestras.TabIndex = 0
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label7.Location = New System.Drawing.Point(16, 38)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(106, 19)
-        Me.Label7.TabIndex = 10
-        Me.Label7.Text = "Muestras (n):"
-        '
-        'btn_siguiente
-        '
-        Me.btn_siguiente.BackColor = System.Drawing.Color.White
-        Me.btn_siguiente.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_siguiente.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_siguiente.ForeColor = System.Drawing.Color.DeepSkyBlue
-        Me.btn_siguiente.Image = CType(resources.GetObject("btn_siguiente.Image"), System.Drawing.Image)
-        Me.btn_siguiente.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_siguiente.Location = New System.Drawing.Point(220, 321)
-        Me.btn_siguiente.Margin = New System.Windows.Forms.Padding(4)
-        Me.btn_siguiente.Name = "btn_siguiente"
-        Me.btn_siguiente.Size = New System.Drawing.Size(174, 66)
-        Me.btn_siguiente.TabIndex = 8
-        Me.btn_siguiente.Text = "Siguiente"
-        Me.btn_siguiente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_siguiente.UseVisualStyleBackColor = False
         '
         'GroupBox1
         '
@@ -161,10 +101,10 @@ Partial Class Congruencial_mixto
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.Color.DeepSkyBlue
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 14)
+        Me.GroupBox1.Location = New System.Drawing.Point(27, 12)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(382, 294)
-        Me.GroupBox1.TabIndex = 11
+        Me.GroupBox1.TabIndex = 16
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Datos: "
         '
@@ -187,6 +127,27 @@ Partial Class Congruencial_mixto
         Me.txt_periodo_max.Name = "txt_periodo_max"
         Me.txt_periodo_max.Size = New System.Drawing.Size(160, 27)
         Me.txt_periodo_max.TabIndex = 17
+        '
+        'txt_cant_muestras
+        '
+        Me.txt_cant_muestras.Font = New System.Drawing.Font("Arial Narrow", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_cant_muestras.Location = New System.Drawing.Point(155, 35)
+        Me.txt_cant_muestras.Margin = New System.Windows.Forms.Padding(4)
+        Me.txt_cant_muestras.Name = "txt_cant_muestras"
+        Me.txt_cant_muestras.Size = New System.Drawing.Size(160, 27)
+        Me.txt_cant_muestras.TabIndex = 0
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label7.Location = New System.Drawing.Point(16, 38)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(106, 19)
+        Me.Label7.TabIndex = 10
+        Me.Label7.Text = "Muestras (n):"
         '
         'txt_constante_c
         '
@@ -296,50 +257,87 @@ Partial Class Congruencial_mixto
         Me.Label1.TabIndex = 8
         Me.Label1.Text = "Semilla(Xo):"
         '
-        'GroupBox2
+        'btn_siguiente
         '
-        Me.GroupBox2.Controls.Add(Me.grilla_numeros)
-        Me.GroupBox2.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox2.ForeColor = System.Drawing.Color.DeepSkyBlue
-        Me.GroupBox2.Location = New System.Drawing.Point(436, 14)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(507, 539)
-        Me.GroupBox2.TabIndex = 12
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Lista de Numeros Aleatorios:"
+        Me.btn_siguiente.BackColor = System.Drawing.Color.White
+        Me.btn_siguiente.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_siguiente.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_siguiente.ForeColor = System.Drawing.Color.DeepSkyBlue
+        Me.btn_siguiente.Image = CType(resources.GetObject("btn_siguiente.Image"), System.Drawing.Image)
+        Me.btn_siguiente.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btn_siguiente.Location = New System.Drawing.Point(257, 338)
+        Me.btn_siguiente.Margin = New System.Windows.Forms.Padding(4)
+        Me.btn_siguiente.Name = "btn_siguiente"
+        Me.btn_siguiente.Size = New System.Drawing.Size(174, 66)
+        Me.btn_siguiente.TabIndex = 14
+        Me.btn_siguiente.Text = "Siguiente"
+        Me.btn_siguiente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_siguiente.UseVisualStyleBackColor = False
         '
-        'Congruencial_mixto
+        'btn_limpiar
+        '
+        Me.btn_limpiar.BackColor = System.Drawing.Color.White
+        Me.btn_limpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_limpiar.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_limpiar.ForeColor = System.Drawing.Color.DeepSkyBlue
+        Me.btn_limpiar.Image = CType(resources.GetObject("btn_limpiar.Image"), System.Drawing.Image)
+        Me.btn_limpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btn_limpiar.Location = New System.Drawing.Point(140, 431)
+        Me.btn_limpiar.Margin = New System.Windows.Forms.Padding(4)
+        Me.btn_limpiar.Name = "btn_limpiar"
+        Me.btn_limpiar.Size = New System.Drawing.Size(160, 69)
+        Me.btn_limpiar.TabIndex = 15
+        Me.btn_limpiar.Text = "Limpiar"
+        Me.btn_limpiar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_limpiar.UseVisualStyleBackColor = False
+        '
+        'btn_cargar_aleatorios
+        '
+        Me.btn_cargar_aleatorios.BackColor = System.Drawing.Color.White
+        Me.btn_cargar_aleatorios.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_cargar_aleatorios.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_cargar_aleatorios.ForeColor = System.Drawing.Color.DeepSkyBlue
+        Me.btn_cargar_aleatorios.Image = CType(resources.GetObject("btn_cargar_aleatorios.Image"), System.Drawing.Image)
+        Me.btn_cargar_aleatorios.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btn_cargar_aleatorios.Location = New System.Drawing.Point(49, 338)
+        Me.btn_cargar_aleatorios.Margin = New System.Windows.Forms.Padding(4)
+        Me.btn_cargar_aleatorios.Name = "btn_cargar_aleatorios"
+        Me.btn_cargar_aleatorios.Size = New System.Drawing.Size(175, 66)
+        Me.btn_cargar_aleatorios.TabIndex = 13
+        Me.btn_cargar_aleatorios.Text = "Mostrar Grilla"
+        Me.btn_cargar_aleatorios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_cargar_aleatorios.UseVisualStyleBackColor = False
+        '
+        'Congruencial_multiplicativo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.ClientSize = New System.Drawing.Size(972, 593)
+        Me.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.ClientSize = New System.Drawing.Size(980, 606)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.btn_siguiente)
         Me.Controls.Add(Me.btn_limpiar)
         Me.Controls.Add(Me.btn_cargar_aleatorios)
-        Me.Margin = New System.Windows.Forms.Padding(4)
-        Me.Name = "Congruencial_mixto"
-        Me.Text = "Congruencial Mixto"
+        Me.Name = "Congruencial_multiplicativo"
+        Me.Text = "CongruencialMultiplicativo"
+        Me.GroupBox2.ResumeLayout(False)
         CType(Me.grilla_numeros, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        Me.GroupBox2.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents btn_cargar_aleatorios As System.Windows.Forms.Button
-    Friend WithEvents grilla_numeros As System.Windows.Forms.DataGridView
-    Friend WithEvents btn_limpiar As System.Windows.Forms.Button
-    Friend WithEvents posicion As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents rnd As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents txt_cant_muestras As System.Windows.Forms.TextBox
-    Friend WithEvents Label7 As System.Windows.Forms.Label
-    Friend WithEvents btn_siguiente As System.Windows.Forms.Button
+
+    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents grilla_numeros As DataGridView
+    Friend WithEvents posicion As DataGridViewTextBoxColumn
+    Friend WithEvents rnd As DataGridViewTextBoxColumn
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents txt_constante_a As TextBox
     Friend WithEvents txt_periodo_max As TextBox
+    Friend WithEvents txt_cant_muestras As TextBox
+    Friend WithEvents Label7 As Label
     Friend WithEvents txt_constante_c As TextBox
     Friend WithEvents txt_exponente As TextBox
     Friend WithEvents txt_intervalos As TextBox
@@ -350,5 +348,7 @@ Partial Class Congruencial_mixto
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents btn_siguiente As Button
+    Friend WithEvents btn_limpiar As Button
+    Friend WithEvents btn_cargar_aleatorios As Button
 End Class
