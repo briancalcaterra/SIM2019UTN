@@ -1,8 +1,5 @@
 ﻿
 Public Class Congruencial_mixto
-    'creacion del vector para guardar los numeros aleatorios 
-    Dim numeros(20) As Decimal
-    Dim i As Integer
     'a)	Realizar un programa que genere una serie de 20 números aleatorios entre 0 y 0,9999 (4 dígitos decimales) a partir de un valor numérico indicado como raíz, 
     'utilizando los métodos congruenciales mixto y multiplicativo. Las constantes a utilizar por los métodos deben ser ingresadas por  el usuario. 
     'Una vez que se listan los 20 números, debe permitir seguir la serie de a un valor por vez. 
@@ -11,57 +8,97 @@ Public Class Congruencial_mixto
     'que represente las frecuencias observadas y esperadas (la gráfica se aceptará que se genere en base a un archivo de salida del programa, en Excel).
     'La serie generada debe por ser vista (bajar a archivo o visualizar en pantalla).
     'c)	Lo mismo que el punto anterior, pero utilizando el método congruencial mixto.
-
-
+    'Declaracion de variables que contendran a los valores ingresados por el usuario
+    'xo: valor semilla
+    'g: exponente para calcular m
+    'k: cantidad de intervalos
+    'c: constante aditiva
+    'a: constante multiplicativa
+    'x_ultimo: ultimo numero generado de la serie
+    'i_ultimo: ultima posicion guardada en la grilla
+    Dim g, k, i_ultimo As Integer
+    Dim xo, c, a, aleatorio, m, x_mas_1, x_ultimo As Double
+    Dim var As Boolean
+   
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 
-    Private Sub btn_cargar_vector_Click(sender As Object, e As EventArgs) Handles btn_cargar_vector.Click
-        Dim xo, g, k, c, m, a As Integer
-        'Declaracion de variables que contendran a los valores ingresados por el usuario
-        'xo: valor semilla
-        'g: exponente para calcular m
-        'k: cantidad de intervalos
-        'c: constante aditiva
-        'a: constante multiplicativa
-        xo = Me.txt_semilla.Text
-        g = Me.txt_exponente.Text
-        k = Me.txt_intervalos.Text
-        c = Me.txt_constante_c.Text
-        m = 2 ^ g
-        Me.txt_periodo_max.Text = m
-        a = 1 + (4 * k)
-        Me.txt_constante_a.Text = a
-        i = 1
-        'ciclo para cargar el arreglo
-        Do While (i <= 20)
-            Dim x_mas_1 As Integer
-            'aca se calcula el valor de (x + 1), como parametro se ingresa el valor semilla
-            x_mas_1 = (a * xo + c) Mod (m)
-            Dim rnd As Decimal
-            rnd = (Convert.ToDecimal(x_mas_1 / (m - 1)))
-            rnd = Math.Round(rnd, 4)
-            numeros(i) = rnd
-            i = i + 1
-            'el valor semilla se convierte en (x+1) y se utiliza para la siguiente iteracion
-            xo = x_mas_1
-        Loop
-    End Sub
+    Private Function Validar_campos() As Boolean
+        If (txt_semilla.Text = "" Or txt_intervalos.Text = "" Or txt_exponente.Text = "" Or txt_constante_c.Text = "" Or txt_cant_muestras.Text = "") Then
+            var = False
+        Else
+            var = True
+        End If
+        Return var
+    End Function
+ 
     Private Sub btn_cargar_aleatorios_Click(sender As Object, e As EventArgs) Handles btn_cargar_aleatorios.Click
         'Subrutina que carga en la grilla los numeros pseudo-aleatorios almacenados en el arreglo
-        i = 1
-        Me.grilla_numeros.Rows.Clear()
-        Do While (i <= 20)
-            grilla_numeros.Rows.Add(i, numeros(i))
-            i = i + 1
-        Loop
-
+        Validar_campos()
+        If var = False Then
+            MsgBox("Ingrese todas las variables requeridas", MsgBoxStyle.OkOnly, "Error")
+            Me.txt_cant_muestras.Focus()
+        Else
+            Dim i, n As Integer
+            xo = Me.txt_semilla.Text
+            g = Me.txt_exponente.Text
+            k = Me.txt_intervalos.Text
+            c = Me.txt_constante_c.Text
+            m = 2 ^ g
+            Me.txt_periodo_max.Text = m
+            a = 1 + (4 * k)
+            Me.txt_constante_a.Text = a
+            n = txt_cant_muestras.Text
+            'creacion del vector para guardar los numeros aleatorios 
+            Dim numeros(0 To (n - 1)) As Double
+            i = 0
+            'ciclo para cargar el arreglo
+            Do While (i <= n - 1)
+                'aca se calcula el valor de (x + 1), como parametro se ingresa el valor semilla
+                x_mas_1 = (a * xo + c) Mod (m)
+                aleatorio = x_mas_1 / m
+                numeros(i) = FormatNumber(aleatorio, 4)
+                i = i + 1
+                'el valor semilla se convierte en (x+1) y se utiliza para la siguiente iteracion
+                xo = x_mas_1
+            Loop
+            x_ultimo = x_mas_1
+            i_ultimo = i
+            Dim j As Integer
+            j = 0
+            Me.grilla_numeros.Rows.Clear()
+            Do While (j <= n - 1)
+                grilla_numeros.Rows.Add(j, numeros(j))
+                j = j + 1
+            Loop
+        End If
     End Sub
 
+    Private Sub btn_siguiente_Click(sender As Object, e As EventArgs) Handles btn_siguiente.Click
+        Validar_campos()
+        If var = False Then
+            MsgBox("Ingrese todas las variables requeridas", MsgBoxStyle.OkOnly, "Error")
+            Me.txt_cant_muestras.Focus()
+        Else
+            i_ultimo = i_ultimo
+            x_ultimo = (a * x_ultimo + c) Mod (m)
+            aleatorio = FormatNumber((x_ultimo / m), 4)
+            grilla_numeros.Rows.Add(i_ultimo, aleatorio)
+            i_ultimo = i_ultimo + 1
+        End If
+    End Sub
 
-
-
-
+    Private Sub btn_limpiar_Click(sender As Object, e As EventArgs) Handles btn_limpiar.Click
+        Me.txt_semilla.Text = ""
+        Me.txt_exponente.Text = ""
+        Me.txt_intervalos.Text = ""
+        Me.txt_constante_c.Text = ""
+        Me.txt_periodo_max.Text = ""
+        Me.txt_constante_a.Text = ""
+        Me.txt_cant_muestras.Text = ""
+        Me.grilla_numeros.Rows.Clear()
+        Me.txt_cant_muestras.Focus()
+    End Sub
 
 End Class

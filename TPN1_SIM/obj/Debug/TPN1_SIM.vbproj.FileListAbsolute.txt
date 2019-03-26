@@ -8,3 +8,4 @@ C:\Users\Brian\Documents\Visual Studio 2013\Projects\TPN1_SIM\TPN1_SIM\obj\Debug
 C:\Users\Brian\Documents\Visual Studio 2013\Projects\TPN1_SIM\TPN1_SIM\obj\Debug\TPN1_SIM.xml
 C:\Users\Brian\Documents\Visual Studio 2013\Projects\TPN1_SIM\TPN1_SIM\obj\Debug\TPN1_SIM.pdb
 C:\Users\Brian\Documents\Visual Studio 2013\Projects\TPN1_SIM\TPN1_SIM\obj\Debug\TPN1_SIM.Congruencial_mixto.resources
+C:\Users\Brian\Documents\Visual Studio 2013\Projects\TPN1_SIM\TPN1_SIM\obj\Debug\TPN1_SIM.CongruencialMultiplicativo.resources
