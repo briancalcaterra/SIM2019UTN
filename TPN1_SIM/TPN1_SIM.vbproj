@@ -70,6 +70,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CongruencialMultiplicativo.Designer.vb">
+      <DependentUpon>CongruencialMultiplicativo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CongruencialMultiplicativo.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Congruencial_mixto.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +100,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="CongruencialMultiplicativo.resx">
+      <DependentUpon>CongruencialMultiplicativo.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Congruencial_mixto.resx">
       <DependentUpon>Congruencial_mixto.vb</DependentUpon>
     </EmbeddedResource>
