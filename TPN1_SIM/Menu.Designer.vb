@@ -36,7 +36,7 @@ Partial Class Menu
         Me.btn_multiplicativo.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_multiplicativo.ForeColor = System.Drawing.Color.DeepSkyBlue
         Me.btn_multiplicativo.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_multiplicativo.Location = New System.Drawing.Point(474, 107)
+        Me.btn_multiplicativo.Location = New System.Drawing.Point(472, 196)
         Me.btn_multiplicativo.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_multiplicativo.Name = "btn_multiplicativo"
         Me.btn_multiplicativo.Size = New System.Drawing.Size(177, 66)
@@ -50,7 +50,7 @@ Partial Class Menu
         Me.bnt_mixto.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.bnt_mixto.ForeColor = System.Drawing.Color.DeepSkyBlue
         Me.bnt_mixto.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.bnt_mixto.Location = New System.Drawing.Point(476, 211)
+        Me.bnt_mixto.Location = New System.Drawing.Point(476, 79)
         Me.bnt_mixto.Margin = New System.Windows.Forms.Padding(4)
         Me.bnt_mixto.Name = "bnt_mixto"
         Me.bnt_mixto.Size = New System.Drawing.Size(175, 66)
