@@ -22,3 +22,4 @@ C:\Users\User\Documents\UTN\4to\Sim\SIM2019UTN\TPN1_SIM\obj\Debug\TPN1_SIM.xml
 C:\Users\User\Documents\UTN\4to\Sim\SIM2019UTN\TPN1_SIM\obj\Debug\TPN1_SIM.pdb
 C:\Users\User\Documents\UTN\4to\Sim\SIM2019UTN\TPN1_SIM\obj\Debug\TPN1_SIM.Congruencial_multiplicativo.resources
 C:\Users\Brian\Documents\Visual Studio 2013\Projects\TPN1_SIM\TPN1_SIM\obj\Debug\TPN1_SIM.Congruencial_multiplicativo.resources
+C:\Users\Brian\Documents\Visual Studio 2013\Projects\TPN1_SIM\TPN1_SIM\obj\Debug\TPN1_SIM.Menu.resources

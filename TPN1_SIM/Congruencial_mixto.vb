@@ -50,18 +50,16 @@ Public Class Congruencial_mixto
             a = 1 + (4 * k)
             Me.txt_constante_a.Text = a
             n = txt_cant_muestras.Text
-            'creacion del vector para guardar los numeros aleatorios 
-            Dim numeros(0 To (n - 1)) As Double
+
+            Dim numeros(0 To (n - 1)) As Double 'creacion del vector para guardar los numeros aleatorios
             i = 0
-            'ciclo para cargar el arreglo
-            Do While (i <= n - 1)
-                'aca se calcula el valor de (x + 1), como parametro se ingresa el valor semilla
-                x_mas_1 = (a * xo + c) Mod (m)
+
+            Do While (i <= n - 1) 'ciclo para cargar el arreglo
+                x_mas_1 = (a * xo + c) Mod (m) 'aca se calcula el valor de (x + 1), como parametro se ingresa el valor semilla
                 aleatorio = x_mas_1 / m
                 numeros(i) = FormatNumber(aleatorio, 4)
                 i = i + 1
-                'el valor semilla se convierte en (x+1) y se utiliza para la siguiente iteracion
-                xo = x_mas_1
+                xo = x_mas_1 'el valor semilla se convierte en (x+1) y se utiliza para la siguiente iteracion
             Loop
             x_ultimo = x_mas_1
             i_ultimo = i

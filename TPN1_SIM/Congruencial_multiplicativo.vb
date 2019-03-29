@@ -7,6 +7,7 @@
     Private Sub btn_cargar_aleatorios_Click(sender As Object, e As EventArgs) Handles btn_cargar_aleatorios.Click
         'Subrutina que carga en la grilla los numeros pseudo-aleatorios almacenados en el arreglo
         Validar_campos()
+
         If var = False Then
             MsgBox("Ingrese todas las variables requeridas", MsgBoxStyle.OkOnly, "Error")
             Me.txt_cant_muestras.Focus()
@@ -17,31 +18,36 @@
             k = Me.txt_intervalos.Text
             m = 2 ^ (g - 2)
             Me.txt_periodo_max.Text = m
-            a = 3 + (8 * k)
+            a = 3 + (8 * k) 'calculo de la constante a
             Me.txt_constante_a.Text = a
-            n = txt_cant_muestras.Text
-            'creacion del vector para guardar los numeros aleatorios 
-            Dim numeros(0 To (n - 1)) As Double
+            n = Me.txt_cant_muestras.Text 'cantidad de muestras o numeros que se van a generar
+            Dim numeros(0 To (n - 1)) As Double 'creacion del vector para guardar los numeros aleatorios 
             i = 0
-            'ciclo para cargar el arreglo
-            Do While (i <= n - 1)
-                'aca se calcula el valor de (x + 1), como parametro se ingresa el valor semilla
-                x_mas_1 = (a * xo) Mod (m)
-                aleatorio = x_mas_1 / (m - 1)
-                numeros(i) = FormatNumber(aleatorio, 4)
-                i = i + 1
-                'el valor semilla se convierte en (x+1) y se utiliza para la siguiente iteracion
-                xo = x_mas_1
-            Loop
-            x_ultimo = x_mas_1
-            i_ultimo = i
-            Dim j As Integer
-            j = 0
-            Me.grilla_numeros.Rows.Clear()
-            Do While (j <= n - 1)
-                grilla_numeros.Rows.Add(j, numeros(j))
-                j = j + 1
-            Loop
+            validar_semilla(xo)
+            If bandera = True Then
+                Do While (i <= n - 1) 'ciclo para cargar el arreglo
+                    x_mas_1 = (a * xo) Mod (m) 'aca se calcula el valor de (x + 1), como parametro se ingresa el valor semilla
+                    aleatorio = x_mas_1 / (m - 1)
+                    numeros(i) = FormatNumber(aleatorio, 4)
+                    i = i + 1
+                    xo = x_mas_1 'el valor semilla se convierte en (x+1) y se utiliza para la siguiente iteracion
+                Loop
+                x_ultimo = x_mas_1
+                i_ultimo = i
+                Dim j As Integer
+                j = 0
+                Me.grilla_numeros.Rows.Clear()
+                Do While (j <= n - 1)
+                    grilla_numeros.Rows.Add(j, numeros(j))
+                    j = j + 1
+                Loop
+            Else
+                MsgBox("Ingrese un numero impar", MsgBoxStyle.OkOnly, "Error")
+                Me.txt_semilla.Text = ""
+                Me.grilla_numeros.Rows.Clear()
+                Me.txt_semilla.Focus()
+            End If
+           
         End If
     End Sub
 
@@ -86,7 +92,6 @@
     Private Function validar_semilla(c) As Boolean
         If c Mod 2 = 0 Then
             bandera = False
-            MsgBox("Ingrese un numero impar", MsgBoxStyle.OkOnly, "Error")
         Else
             bandera = True
         End If
@@ -94,7 +99,5 @@
     End Function
 
    
-    Private Sub txt_semilla_TextChanged(sender As Object, e As EventArgs) Handles txt_semilla.TextChanged
-        validar_semilla(xo)
-    End Sub
+    
 End Class
