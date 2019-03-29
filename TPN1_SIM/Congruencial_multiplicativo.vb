@@ -27,7 +27,7 @@
             If bandera = True Then
                 Do While (i <= n - 1) 'ciclo para cargar el arreglo
                     x_mas_1 = (a * xo) Mod (m) 'aca se calcula el valor de (x + 1), como parametro se ingresa el valor semilla
-                    aleatorio = x_mas_1 / (m - 1)
+                    aleatorio = x_mas_1 / (m)
                     numeros(i) = FormatNumber(aleatorio, 4)
                     i = i + 1
                     xo = x_mas_1 'el valor semilla se convierte en (x+1) y se utiliza para la siguiente iteracion
@@ -51,6 +51,7 @@
         End If
     End Sub
 
+
     Private Function Validar_campos() As Boolean
         If (txt_semilla.Text = "" Or txt_intervalos.Text = "" Or txt_exponente.Text = "" Or txt_cant_muestras.Text = "") Then
             var = False
@@ -69,7 +70,7 @@
         Else
             i_ultimo = i_ultimo
             x_ultimo = (a * x_ultimo) Mod (m)
-            aleatorio = FormatNumber((x_ultimo / m - 1), 4)
+            aleatorio = FormatNumber((x_ultimo / m), 4)
             grilla_numeros.Rows.Add(i_ultimo, aleatorio)
             i_ultimo = i_ultimo + 1
         End If
@@ -88,7 +89,6 @@
     End Sub
 
 
-   
     Private Function validar_semilla(c) As Boolean
         If c Mod 2 = 0 Then
             bandera = False
@@ -98,6 +98,10 @@
         Return bandera
     End Function
 
-   
-    
+       
+    Private Sub Congruencial_multiplicativo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+
 End Class

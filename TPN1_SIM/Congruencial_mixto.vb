@@ -18,11 +18,9 @@ Public Class Congruencial_mixto
     'i_ultimo: ultima posicion guardada en la grilla
     Dim g, k, i_ultimo As Integer
     Dim xo, c, a, aleatorio, m, x_mas_1, x_ultimo As Double
-    Dim var As Boolean
+    Dim var, bandera As Boolean
    
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
+    
 
     Private Function Validar_campos() As Boolean
         If (txt_semilla.Text = "" Or txt_intervalos.Text = "" Or txt_exponente.Text = "" Or txt_constante_c.Text = "" Or txt_cant_muestras.Text = "") Then
@@ -45,6 +43,7 @@ Public Class Congruencial_mixto
             g = Me.txt_exponente.Text
             k = Me.txt_intervalos.Text
             c = Me.txt_constante_c.Text
+            validar_enteros(xo, g, k, c)
             m = 2 ^ g
             Me.txt_periodo_max.Text = m
             a = 1 + (4 * k)
@@ -54,22 +53,26 @@ Public Class Congruencial_mixto
             Dim numeros(0 To (n - 1)) As Double 'creacion del vector para guardar los numeros aleatorios
             i = 0
 
-            Do While (i <= n - 1) 'ciclo para cargar el arreglo
-                x_mas_1 = (a * xo + c) Mod (m) 'aca se calcula el valor de (x + 1), como parametro se ingresa el valor semilla
-                aleatorio = x_mas_1 / m
-                numeros(i) = FormatNumber(aleatorio, 4)
-                i = i + 1
-                xo = x_mas_1 'el valor semilla se convierte en (x+1) y se utiliza para la siguiente iteracion
-            Loop
-            x_ultimo = x_mas_1
-            i_ultimo = i
-            Dim j As Integer
-            j = 0
-            Me.grilla_numeros.Rows.Clear()
-            Do While (j <= n - 1)
-                grilla_numeros.Rows.Add(j, numeros(j))
-                j = j + 1
-            Loop
+            If bandera = True Then
+                Do While (i <= n - 1) 'ciclo para cargar el arreglo
+                    x_mas_1 = (a * xo + c) Mod (m) 'aca se calcula el valor de (x + 1), como parametro se ingresa el valor semilla
+                    aleatorio = x_mas_1 / m
+                    numeros(i) = FormatNumber(aleatorio, 4)
+                    i = i + 1
+                    xo = x_mas_1 'el valor semilla se convierte en (x+1) y se utiliza para la siguiente iteracion
+                Loop
+                x_ultimo = x_mas_1
+                i_ultimo = i
+                Dim j As Integer
+                j = 0
+                Me.grilla_numeros.Rows.Clear()
+                Do While (j <= n - 1)
+                    grilla_numeros.Rows.Add(j, numeros(j))
+                    j = j + 1
+                Loop
+            Else
+                MsgBox("Ingrese numeros enteros en los campos de texto", MsgBoxStyle.OkOnly, "Error")
+            End If
         End If
     End Sub
 
@@ -98,5 +101,19 @@ Public Class Congruencial_mixto
         Me.grilla_numeros.Rows.Clear()
         Me.txt_cant_muestras.Focus()
     End Sub
+
+    Private Function validar_enteros(x1, x2, x3, x4) As Boolean
+        If (x1 Mod 1) = 0 And (x2 Mod 1) = 0 And (x3 Mod 1) = 0 And (x4 Mod 1) = 0 Then
+            If x1 > 0 And x2 > 0 And x3 > 0 And x4 > 0 Then
+                bandera = True
+            Else
+                MsgBox("Ingrese numeros positivos en los campos de texto", MsgBoxStyle.OkOnly, "Error")
+                bandera = False
+            End If
+        Else
+            bandera = False
+        End If
+        Return bandera
+    End Function
 
 End Class

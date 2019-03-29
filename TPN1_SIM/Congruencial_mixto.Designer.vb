@@ -58,10 +58,9 @@ Partial Class Congruencial_mixto
         Me.btn_cargar_aleatorios.ForeColor = System.Drawing.Color.DeepSkyBlue
         Me.btn_cargar_aleatorios.Image = CType(resources.GetObject("btn_cargar_aleatorios.Image"), System.Drawing.Image)
         Me.btn_cargar_aleatorios.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_cargar_aleatorios.Location = New System.Drawing.Point(37, 321)
-        Me.btn_cargar_aleatorios.Margin = New System.Windows.Forms.Padding(4)
+        Me.btn_cargar_aleatorios.Location = New System.Drawing.Point(28, 261)
         Me.btn_cargar_aleatorios.Name = "btn_cargar_aleatorios"
-        Me.btn_cargar_aleatorios.Size = New System.Drawing.Size(175, 66)
+        Me.btn_cargar_aleatorios.Size = New System.Drawing.Size(131, 54)
         Me.btn_cargar_aleatorios.TabIndex = 7
         Me.btn_cargar_aleatorios.Text = "Mostrar Grilla"
         Me.btn_cargar_aleatorios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -71,10 +70,9 @@ Partial Class Congruencial_mixto
         '
         Me.grilla_numeros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.grilla_numeros.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.posicion, Me.rnd})
-        Me.grilla_numeros.Location = New System.Drawing.Point(19, 27)
-        Me.grilla_numeros.Margin = New System.Windows.Forms.Padding(4)
+        Me.grilla_numeros.Location = New System.Drawing.Point(14, 22)
         Me.grilla_numeros.Name = "grilla_numeros"
-        Me.grilla_numeros.Size = New System.Drawing.Size(460, 550)
+        Me.grilla_numeros.Size = New System.Drawing.Size(345, 447)
         Me.grilla_numeros.TabIndex = 10
         '
         'posicion
@@ -95,10 +93,9 @@ Partial Class Congruencial_mixto
         Me.btn_limpiar.ForeColor = System.Drawing.Color.DeepSkyBlue
         Me.btn_limpiar.Image = CType(resources.GetObject("btn_limpiar.Image"), System.Drawing.Image)
         Me.btn_limpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_limpiar.Location = New System.Drawing.Point(132, 395)
-        Me.btn_limpiar.Margin = New System.Windows.Forms.Padding(4)
+        Me.btn_limpiar.Location = New System.Drawing.Point(99, 321)
         Me.btn_limpiar.Name = "btn_limpiar"
-        Me.btn_limpiar.Size = New System.Drawing.Size(160, 69)
+        Me.btn_limpiar.Size = New System.Drawing.Size(120, 56)
         Me.btn_limpiar.TabIndex = 9
         Me.btn_limpiar.Text = "Limpiar"
         Me.btn_limpiar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -107,10 +104,9 @@ Partial Class Congruencial_mixto
         'txt_cant_muestras
         '
         Me.txt_cant_muestras.Font = New System.Drawing.Font("Arial Narrow", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_cant_muestras.Location = New System.Drawing.Point(155, 35)
-        Me.txt_cant_muestras.Margin = New System.Windows.Forms.Padding(4)
+        Me.txt_cant_muestras.Location = New System.Drawing.Point(116, 28)
         Me.txt_cant_muestras.Name = "txt_cant_muestras"
-        Me.txt_cant_muestras.Size = New System.Drawing.Size(160, 27)
+        Me.txt_cant_muestras.Size = New System.Drawing.Size(121, 23)
         Me.txt_cant_muestras.TabIndex = 0
         '
         'Label7
@@ -118,10 +114,9 @@ Partial Class Congruencial_mixto
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label7.Location = New System.Drawing.Point(16, 38)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label7.Location = New System.Drawing.Point(12, 31)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(106, 19)
+        Me.Label7.Size = New System.Drawing.Size(92, 16)
         Me.Label7.TabIndex = 10
         Me.Label7.Text = "Muestras (n):"
         '
@@ -133,10 +128,9 @@ Partial Class Congruencial_mixto
         Me.btn_siguiente.ForeColor = System.Drawing.Color.DeepSkyBlue
         Me.btn_siguiente.Image = CType(resources.GetObject("btn_siguiente.Image"), System.Drawing.Image)
         Me.btn_siguiente.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_siguiente.Location = New System.Drawing.Point(220, 321)
-        Me.btn_siguiente.Margin = New System.Windows.Forms.Padding(4)
+        Me.btn_siguiente.Location = New System.Drawing.Point(165, 261)
         Me.btn_siguiente.Name = "btn_siguiente"
-        Me.btn_siguiente.Size = New System.Drawing.Size(174, 66)
+        Me.btn_siguiente.Size = New System.Drawing.Size(130, 54)
         Me.btn_siguiente.TabIndex = 8
         Me.btn_siguiente.Text = "Siguiente"
         Me.btn_siguiente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -161,9 +155,11 @@ Partial Class Congruencial_mixto
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.Color.DeepSkyBlue
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 14)
+        Me.GroupBox1.Location = New System.Drawing.Point(9, 11)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(382, 294)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Size = New System.Drawing.Size(286, 239)
         Me.GroupBox1.TabIndex = 11
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Datos: "
@@ -172,56 +168,50 @@ Partial Class Congruencial_mixto
         '
         Me.txt_constante_a.Enabled = False
         Me.txt_constante_a.Font = New System.Drawing.Font("Arial Narrow", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_constante_a.Location = New System.Drawing.Point(155, 230)
-        Me.txt_constante_a.Margin = New System.Windows.Forms.Padding(4)
+        Me.txt_constante_a.Location = New System.Drawing.Point(116, 187)
         Me.txt_constante_a.Name = "txt_constante_a"
-        Me.txt_constante_a.Size = New System.Drawing.Size(160, 27)
+        Me.txt_constante_a.Size = New System.Drawing.Size(121, 23)
         Me.txt_constante_a.TabIndex = 18
         '
         'txt_periodo_max
         '
         Me.txt_periodo_max.Enabled = False
         Me.txt_periodo_max.Font = New System.Drawing.Font("Arial Narrow", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_periodo_max.Location = New System.Drawing.Point(155, 200)
-        Me.txt_periodo_max.Margin = New System.Windows.Forms.Padding(4)
+        Me.txt_periodo_max.Location = New System.Drawing.Point(116, 162)
         Me.txt_periodo_max.Name = "txt_periodo_max"
-        Me.txt_periodo_max.Size = New System.Drawing.Size(160, 27)
+        Me.txt_periodo_max.Size = New System.Drawing.Size(121, 23)
         Me.txt_periodo_max.TabIndex = 17
         '
         'txt_constante_c
         '
         Me.txt_constante_c.Font = New System.Drawing.Font("Arial Narrow", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_constante_c.Location = New System.Drawing.Point(155, 168)
-        Me.txt_constante_c.Margin = New System.Windows.Forms.Padding(4)
+        Me.txt_constante_c.Location = New System.Drawing.Point(116, 136)
         Me.txt_constante_c.Name = "txt_constante_c"
-        Me.txt_constante_c.Size = New System.Drawing.Size(160, 27)
+        Me.txt_constante_c.Size = New System.Drawing.Size(121, 23)
         Me.txt_constante_c.TabIndex = 16
         '
         'txt_exponente
         '
         Me.txt_exponente.Font = New System.Drawing.Font("Arial Narrow", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_exponente.Location = New System.Drawing.Point(155, 134)
-        Me.txt_exponente.Margin = New System.Windows.Forms.Padding(4)
+        Me.txt_exponente.Location = New System.Drawing.Point(116, 109)
         Me.txt_exponente.Name = "txt_exponente"
-        Me.txt_exponente.Size = New System.Drawing.Size(160, 27)
+        Me.txt_exponente.Size = New System.Drawing.Size(121, 23)
         Me.txt_exponente.TabIndex = 11
         '
         'txt_intervalos
         '
         Me.txt_intervalos.Font = New System.Drawing.Font("Arial Narrow", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_intervalos.Location = New System.Drawing.Point(155, 102)
-        Me.txt_intervalos.Margin = New System.Windows.Forms.Padding(4)
+        Me.txt_intervalos.Location = New System.Drawing.Point(116, 83)
         Me.txt_intervalos.Name = "txt_intervalos"
-        Me.txt_intervalos.Size = New System.Drawing.Size(160, 27)
+        Me.txt_intervalos.Size = New System.Drawing.Size(121, 23)
         Me.txt_intervalos.TabIndex = 9
         '
         'txt_semilla
         '
         Me.txt_semilla.Font = New System.Drawing.Font("Arial Narrow", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_semilla.Location = New System.Drawing.Point(155, 70)
-        Me.txt_semilla.Margin = New System.Windows.Forms.Padding(4)
+        Me.txt_semilla.Location = New System.Drawing.Point(116, 57)
         Me.txt_semilla.Name = "txt_semilla"
-        Me.txt_semilla.Size = New System.Drawing.Size(160, 27)
+        Me.txt_semilla.Size = New System.Drawing.Size(121, 23)
         Me.txt_semilla.TabIndex = 7
         '
         'Label6
@@ -229,10 +219,9 @@ Partial Class Congruencial_mixto
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label6.Location = New System.Drawing.Point(16, 238)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label6.Location = New System.Drawing.Point(12, 193)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(35, 19)
+        Me.Label6.Size = New System.Drawing.Size(30, 16)
         Me.Label6.TabIndex = 12
         Me.Label6.Text = "(a):"
         '
@@ -241,10 +230,9 @@ Partial Class Congruencial_mixto
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label5.Location = New System.Drawing.Point(16, 208)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Location = New System.Drawing.Point(12, 169)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(39, 19)
+        Me.Label5.Size = New System.Drawing.Size(33, 16)
         Me.Label5.TabIndex = 13
         Me.Label5.Text = "(m):"
         '
@@ -253,10 +241,9 @@ Partial Class Congruencial_mixto
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label4.Location = New System.Drawing.Point(16, 176)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Location = New System.Drawing.Point(12, 143)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(35, 19)
+        Me.Label4.Size = New System.Drawing.Size(29, 16)
         Me.Label4.TabIndex = 14
         Me.Label4.Text = "(c):"
         '
@@ -265,10 +252,9 @@ Partial Class Congruencial_mixto
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label3.Location = New System.Drawing.Point(16, 142)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Location = New System.Drawing.Point(12, 115)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(116, 19)
+        Me.Label3.Size = New System.Drawing.Size(101, 16)
         Me.Label3.TabIndex = 15
         Me.Label3.Text = "Exponente (g):"
         '
@@ -277,10 +263,9 @@ Partial Class Congruencial_mixto
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label2.Location = New System.Drawing.Point(16, 107)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(12, 87)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(108, 19)
+        Me.Label2.Size = New System.Drawing.Size(94, 16)
         Me.Label2.TabIndex = 10
         Me.Label2.Text = "Intervalos (k):"
         '
@@ -289,10 +274,9 @@ Partial Class Congruencial_mixto
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label1.Location = New System.Drawing.Point(16, 75)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(12, 61)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(98, 19)
+        Me.Label1.Size = New System.Drawing.Size(83, 16)
         Me.Label1.TabIndex = 8
         Me.Label1.Text = "Semilla(Xo):"
         '
@@ -301,25 +285,26 @@ Partial Class Congruencial_mixto
         Me.GroupBox2.Controls.Add(Me.grilla_numeros)
         Me.GroupBox2.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.ForeColor = System.Drawing.Color.DeepSkyBlue
-        Me.GroupBox2.Location = New System.Drawing.Point(436, 14)
+        Me.GroupBox2.Location = New System.Drawing.Point(327, 11)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(507, 539)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox2.Size = New System.Drawing.Size(380, 438)
         Me.GroupBox2.TabIndex = 12
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Lista de Numeros Aleatorios:"
         '
         'Congruencial_mixto
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.ClientSize = New System.Drawing.Size(972, 593)
+        Me.ClientSize = New System.Drawing.Size(729, 482)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.btn_siguiente)
         Me.Controls.Add(Me.btn_limpiar)
         Me.Controls.Add(Me.btn_cargar_aleatorios)
-        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Congruencial_mixto"
         Me.Text = "Congruencial Mixto"
         CType(Me.grilla_numeros, System.ComponentModel.ISupportInitialize).EndInit()

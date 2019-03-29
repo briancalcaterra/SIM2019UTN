@@ -114,7 +114,7 @@ Partial Class Congruencial_multiplicativo
         Me.txt_constante_a.Location = New System.Drawing.Point(116, 171)
         Me.txt_constante_a.Name = "txt_constante_a"
         Me.txt_constante_a.Size = New System.Drawing.Size(121, 23)
-        Me.txt_constante_a.TabIndex = 18
+        Me.txt_constante_a.TabIndex = 6
         '
         'txt_periodo_max
         '
@@ -123,7 +123,7 @@ Partial Class Congruencial_multiplicativo
         Me.txt_periodo_max.Location = New System.Drawing.Point(116, 137)
         Me.txt_periodo_max.Name = "txt_periodo_max"
         Me.txt_periodo_max.Size = New System.Drawing.Size(121, 23)
-        Me.txt_periodo_max.TabIndex = 17
+        Me.txt_periodo_max.TabIndex = 5
         '
         'txt_cant_muestras
         '
@@ -131,7 +131,7 @@ Partial Class Congruencial_multiplicativo
         Me.txt_cant_muestras.Location = New System.Drawing.Point(116, 28)
         Me.txt_cant_muestras.Name = "txt_cant_muestras"
         Me.txt_cant_muestras.Size = New System.Drawing.Size(121, 23)
-        Me.txt_cant_muestras.TabIndex = 0
+        Me.txt_cant_muestras.TabIndex = 1
         '
         'Label7
         '
@@ -150,7 +150,7 @@ Partial Class Congruencial_multiplicativo
         Me.txt_exponente.Location = New System.Drawing.Point(116, 109)
         Me.txt_exponente.Name = "txt_exponente"
         Me.txt_exponente.Size = New System.Drawing.Size(121, 23)
-        Me.txt_exponente.TabIndex = 11
+        Me.txt_exponente.TabIndex = 4
         '
         'txt_intervalos
         '
@@ -158,7 +158,7 @@ Partial Class Congruencial_multiplicativo
         Me.txt_intervalos.Location = New System.Drawing.Point(116, 83)
         Me.txt_intervalos.Name = "txt_intervalos"
         Me.txt_intervalos.Size = New System.Drawing.Size(121, 23)
-        Me.txt_intervalos.TabIndex = 9
+        Me.txt_intervalos.TabIndex = 3
         '
         'txt_semilla
         '
@@ -166,7 +166,7 @@ Partial Class Congruencial_multiplicativo
         Me.txt_semilla.Location = New System.Drawing.Point(116, 57)
         Me.txt_semilla.Name = "txt_semilla"
         Me.txt_semilla.Size = New System.Drawing.Size(121, 23)
-        Me.txt_semilla.TabIndex = 7
+        Me.txt_semilla.TabIndex = 2
         '
         'Label6
         '
@@ -234,7 +234,7 @@ Partial Class Congruencial_multiplicativo
         Me.btn_siguiente.Location = New System.Drawing.Point(176, 275)
         Me.btn_siguiente.Name = "btn_siguiente"
         Me.btn_siguiente.Size = New System.Drawing.Size(130, 54)
-        Me.btn_siguiente.TabIndex = 14
+        Me.btn_siguiente.TabIndex = 1
         Me.btn_siguiente.Text = "Siguiente"
         Me.btn_siguiente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btn_siguiente.UseVisualStyleBackColor = False
@@ -250,7 +250,7 @@ Partial Class Congruencial_multiplicativo
         Me.btn_limpiar.Location = New System.Drawing.Point(116, 335)
         Me.btn_limpiar.Name = "btn_limpiar"
         Me.btn_limpiar.Size = New System.Drawing.Size(120, 56)
-        Me.btn_limpiar.TabIndex = 15
+        Me.btn_limpiar.TabIndex = 2
         Me.btn_limpiar.Text = "Limpiar"
         Me.btn_limpiar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btn_limpiar.UseVisualStyleBackColor = False
@@ -266,7 +266,7 @@ Partial Class Congruencial_multiplicativo
         Me.btn_cargar_aleatorios.Location = New System.Drawing.Point(35, 275)
         Me.btn_cargar_aleatorios.Name = "btn_cargar_aleatorios"
         Me.btn_cargar_aleatorios.Size = New System.Drawing.Size(131, 54)
-        Me.btn_cargar_aleatorios.TabIndex = 13
+        Me.btn_cargar_aleatorios.TabIndex = 0
         Me.btn_cargar_aleatorios.Text = "Mostrar Grilla"
         Me.btn_cargar_aleatorios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btn_cargar_aleatorios.UseVisualStyleBackColor = False
