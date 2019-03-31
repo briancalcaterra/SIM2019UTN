@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.TPN1_SIM.Congruencial_mixto
+            Me.MainForm = Global.TPN1_SIM.ChiCuadrado
         End Sub
     End Class
 End Namespace

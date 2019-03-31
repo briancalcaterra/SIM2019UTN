@@ -30,11 +30,11 @@ Partial Class Congruencial_multiplicativo
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.txt_constante_a = New System.Windows.Forms.TextBox()
         Me.txt_periodo_max = New System.Windows.Forms.TextBox()
-        Me.txt_cant_muestras = New System.Windows.Forms.TextBox()
+        Me.txt_exponente = New System.Windows.Forms.MaskedTextBox()
+        Me.txt_intervalos = New System.Windows.Forms.MaskedTextBox()
+        Me.txt_semilla = New System.Windows.Forms.MaskedTextBox()
+        Me.txt_cant_muestras = New System.Windows.Forms.MaskedTextBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.txt_exponente = New System.Windows.Forms.TextBox()
-        Me.txt_intervalos = New System.Windows.Forms.TextBox()
-        Me.txt_semilla = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -86,11 +86,11 @@ Partial Class Congruencial_multiplicativo
         Me.GroupBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.GroupBox1.Controls.Add(Me.txt_constante_a)
         Me.GroupBox1.Controls.Add(Me.txt_periodo_max)
-        Me.GroupBox1.Controls.Add(Me.txt_cant_muestras)
-        Me.GroupBox1.Controls.Add(Me.Label7)
         Me.GroupBox1.Controls.Add(Me.txt_exponente)
         Me.GroupBox1.Controls.Add(Me.txt_intervalos)
         Me.GroupBox1.Controls.Add(Me.txt_semilla)
+        Me.GroupBox1.Controls.Add(Me.txt_cant_muestras)
+        Me.GroupBox1.Controls.Add(Me.Label7)
         Me.GroupBox1.Controls.Add(Me.Label6)
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.Label3)
@@ -110,28 +110,50 @@ Partial Class Congruencial_multiplicativo
         'txt_constante_a
         '
         Me.txt_constante_a.Enabled = False
-        Me.txt_constante_a.Font = New System.Drawing.Font("Arial Narrow", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_constante_a.Location = New System.Drawing.Point(116, 171)
+        Me.txt_constante_a.Location = New System.Drawing.Point(116, 166)
         Me.txt_constante_a.Name = "txt_constante_a"
         Me.txt_constante_a.Size = New System.Drawing.Size(121, 23)
-        Me.txt_constante_a.TabIndex = 6
+        Me.txt_constante_a.TabIndex = 5
         '
         'txt_periodo_max
         '
         Me.txt_periodo_max.Enabled = False
-        Me.txt_periodo_max.Font = New System.Drawing.Font("Arial Narrow", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_periodo_max.Location = New System.Drawing.Point(116, 137)
         Me.txt_periodo_max.Name = "txt_periodo_max"
         Me.txt_periodo_max.Size = New System.Drawing.Size(121, 23)
-        Me.txt_periodo_max.TabIndex = 5
+        Me.txt_periodo_max.TabIndex = 4
+        '
+        'txt_exponente
+        '
+        Me.txt_exponente.Location = New System.Drawing.Point(116, 108)
+        Me.txt_exponente.Mask = "999999"
+        Me.txt_exponente.Name = "txt_exponente"
+        Me.txt_exponente.Size = New System.Drawing.Size(121, 23)
+        Me.txt_exponente.TabIndex = 3
+        '
+        'txt_intervalos
+        '
+        Me.txt_intervalos.Location = New System.Drawing.Point(116, 80)
+        Me.txt_intervalos.Mask = "999999"
+        Me.txt_intervalos.Name = "txt_intervalos"
+        Me.txt_intervalos.Size = New System.Drawing.Size(121, 23)
+        Me.txt_intervalos.TabIndex = 2
+        '
+        'txt_semilla
+        '
+        Me.txt_semilla.Location = New System.Drawing.Point(116, 54)
+        Me.txt_semilla.Mask = "999999"
+        Me.txt_semilla.Name = "txt_semilla"
+        Me.txt_semilla.Size = New System.Drawing.Size(121, 23)
+        Me.txt_semilla.TabIndex = 1
         '
         'txt_cant_muestras
         '
-        Me.txt_cant_muestras.Font = New System.Drawing.Font("Arial Narrow", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_cant_muestras.Location = New System.Drawing.Point(116, 28)
+        Me.txt_cant_muestras.Location = New System.Drawing.Point(116, 24)
+        Me.txt_cant_muestras.Mask = "999999"
         Me.txt_cant_muestras.Name = "txt_cant_muestras"
         Me.txt_cant_muestras.Size = New System.Drawing.Size(121, 23)
-        Me.txt_cant_muestras.TabIndex = 1
+        Me.txt_cant_muestras.TabIndex = 0
         '
         'Label7
         '
@@ -144,36 +166,12 @@ Partial Class Congruencial_multiplicativo
         Me.Label7.TabIndex = 10
         Me.Label7.Text = "Muestras (n):"
         '
-        'txt_exponente
-        '
-        Me.txt_exponente.Font = New System.Drawing.Font("Arial Narrow", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_exponente.Location = New System.Drawing.Point(116, 109)
-        Me.txt_exponente.Name = "txt_exponente"
-        Me.txt_exponente.Size = New System.Drawing.Size(121, 23)
-        Me.txt_exponente.TabIndex = 4
-        '
-        'txt_intervalos
-        '
-        Me.txt_intervalos.Font = New System.Drawing.Font("Arial Narrow", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_intervalos.Location = New System.Drawing.Point(116, 83)
-        Me.txt_intervalos.Name = "txt_intervalos"
-        Me.txt_intervalos.Size = New System.Drawing.Size(121, 23)
-        Me.txt_intervalos.TabIndex = 3
-        '
-        'txt_semilla
-        '
-        Me.txt_semilla.Font = New System.Drawing.Font("Arial Narrow", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_semilla.Location = New System.Drawing.Point(116, 57)
-        Me.txt_semilla.Name = "txt_semilla"
-        Me.txt_semilla.Size = New System.Drawing.Size(121, 23)
-        Me.txt_semilla.TabIndex = 2
-        '
         'Label6
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label6.Location = New System.Drawing.Point(15, 179)
+        Me.Label6.Location = New System.Drawing.Point(18, 172)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(30, 16)
         Me.Label6.TabIndex = 12
@@ -184,7 +182,7 @@ Partial Class Congruencial_multiplicativo
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label5.Location = New System.Drawing.Point(12, 149)
+        Me.Label5.Location = New System.Drawing.Point(15, 144)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(33, 16)
         Me.Label5.TabIndex = 13
@@ -298,13 +296,7 @@ Partial Class Congruencial_multiplicativo
     Friend WithEvents posicion As DataGridViewTextBoxColumn
     Friend WithEvents rnd As DataGridViewTextBoxColumn
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents txt_constante_a As TextBox
-    Friend WithEvents txt_periodo_max As TextBox
-    Friend WithEvents txt_cant_muestras As TextBox
     Friend WithEvents Label7 As Label
-    Friend WithEvents txt_exponente As TextBox
-    Friend WithEvents txt_intervalos As TextBox
-    Friend WithEvents txt_semilla As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label3 As Label
@@ -313,4 +305,10 @@ Partial Class Congruencial_multiplicativo
     Friend WithEvents btn_siguiente As Button
     Friend WithEvents btn_limpiar As Button
     Friend WithEvents btn_cargar_aleatorios As Button
+    Friend WithEvents txt_exponente As System.Windows.Forms.MaskedTextBox
+    Friend WithEvents txt_intervalos As System.Windows.Forms.MaskedTextBox
+    Friend WithEvents txt_semilla As System.Windows.Forms.MaskedTextBox
+    Friend WithEvents txt_cant_muestras As System.Windows.Forms.MaskedTextBox
+    Friend WithEvents txt_constante_a As System.Windows.Forms.TextBox
+    Friend WithEvents txt_periodo_max As System.Windows.Forms.TextBox
 End Class

@@ -20,8 +20,6 @@ Public Class Congruencial_mixto
     Dim xo, c, a, aleatorio, m, x_mas_1, x_ultimo As Double
     Dim var, bandera As Boolean
    
-    
-
     Private Function Validar_campos() As Boolean
         If (txt_semilla.Text = "" Or txt_intervalos.Text = "" Or txt_exponente.Text = "" Or txt_constante_c.Text = "" Or txt_cant_muestras.Text = "") Then
             var = False
@@ -43,17 +41,15 @@ Public Class Congruencial_mixto
             g = Me.txt_exponente.Text
             k = Me.txt_intervalos.Text
             c = Me.txt_constante_c.Text
-            validar_enteros(xo, g, k, c)
+            n = Me.txt_cant_muestras.Text
             m = 2 ^ g
             Me.txt_periodo_max.Text = m
             a = 1 + (4 * k)
             Me.txt_constante_a.Text = a
-            n = txt_cant_muestras.Text
-
-            Dim numeros(0 To (n - 1)) As Double 'creacion del vector para guardar los numeros aleatorios
-            i = 0
-
+            Validar_enteros(n, xo, k, g, c)
             If bandera = True Then
+                Dim numeros(0 To (n - 1)) As Double 'creacion del vector para guardar los numeros aleatorios
+                i = 0
                 Do While (i <= n - 1) 'ciclo para cargar el arreglo
                     x_mas_1 = (a * xo + c) Mod (m) 'aca se calcula el valor de (x + 1), como parametro se ingresa el valor semilla
                     aleatorio = x_mas_1 / m
@@ -70,8 +66,6 @@ Public Class Congruencial_mixto
                     grilla_numeros.Rows.Add(j, numeros(j))
                     j = j + 1
                 Loop
-            Else
-                MsgBox("Ingrese numeros enteros en los campos de texto", MsgBoxStyle.OkOnly, "Error")
             End If
         End If
     End Sub
@@ -91,6 +85,10 @@ Public Class Congruencial_mixto
     End Sub
 
     Private Sub btn_limpiar_Click(sender As Object, e As EventArgs) Handles btn_limpiar.Click
+        Limpiar()
+    End Sub
+
+    Private Sub Limpiar()
         Me.txt_semilla.Text = ""
         Me.txt_exponente.Text = ""
         Me.txt_intervalos.Text = ""
@@ -102,18 +100,18 @@ Public Class Congruencial_mixto
         Me.txt_cant_muestras.Focus()
     End Sub
 
-    Private Function validar_enteros(x1, x2, x3, x4) As Boolean
-        If (x1 Mod 1) = 0 And (x2 Mod 1) = 0 And (x3 Mod 1) = 0 And (x4 Mod 1) = 0 Then
-            If x1 > 0 And x2 > 0 And x3 > 0 And x4 > 0 Then
-                bandera = True
-            Else
-                MsgBox("Ingrese numeros positivos en los campos de texto", MsgBoxStyle.OkOnly, "Error")
-                bandera = False
-            End If
+    Private Function Validar_enteros(x1, x2, x3, x4, x5) As Boolean
+        If x1 >= 0 And x2 >= 0 And x3 >= 0 And x4 >= 0 And x5 >= 0 Then
+            bandera = True
         Else
             bandera = False
+            MsgBox("Ingrese numeros enteros positivos", MsgBoxStyle.OkOnly, "Error")
         End If
         Return bandera
     End Function
+
+    Private Sub Congruencial_mixto_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 
 End Class
