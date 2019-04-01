@@ -33,11 +33,13 @@ Randomize: Do While i <= (cant - 1)
         Loop
         Dim j As Integer
         j = 0
-        Me.grilla_chi_cuadrado.Rows.Clear()
+        Me.grilla_serie.Rows.Clear()
         Do While (j <= cant - 1)
-            grilla_chi_cuadrado.Rows.Add(j, lista(j))
+            grilla_serie.Rows.Add(j, lista(j))
             j = j + 1
         Loop
+
+
     End Sub
 
     Private Function Validar_enteros(x1) As Boolean
@@ -54,6 +56,8 @@ Randomize: Do While i <= (cant - 1)
         Me.txt_cantidad_muestras.Text = ""
         Me.grilla_chi_cuadrado.Rows.Clear()
         Me.txt_cantidad_muestras.Focus()
+        Me.grilla_serie.Rows.Clear()
+
     End Sub
 
     Private Sub btn_limpiar_Click(sender As Object, e As EventArgs) Handles btn_limpiar.Click

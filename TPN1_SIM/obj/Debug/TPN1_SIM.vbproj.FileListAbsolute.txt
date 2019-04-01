@@ -24,3 +24,19 @@ C:\Users\User\Documents\UTN\4to\Sim\SIM2019UTN\TPN1_SIM\obj\Debug\TPN1_SIM.Congr
 C:\Users\Brian\Documents\Visual Studio 2013\Projects\TPN1_SIM\TPN1_SIM\obj\Debug\TPN1_SIM.Congruencial_multiplicativo.resources
 C:\Users\Brian\Documents\Visual Studio 2013\Projects\TPN1_SIM\TPN1_SIM\obj\Debug\TPN1_SIM.Menu.resources
 C:\Users\Brian\Documents\Visual Studio 2013\Projects\TPN1_SIM\TPN1_SIM\obj\Debug\TPN1_SIM.ChiCuadrado.resources
+C:\Users\User\Documents\UTN\4to\Sim\SIM2019UTN\SIM2019UTN\TPN1_SIM\bin\Debug\TPN1_SIM.exe.config
+C:\Users\User\Documents\UTN\4to\Sim\SIM2019UTN\SIM2019UTN\TPN1_SIM\bin\Debug\TPN1_SIM.exe
+C:\Users\User\Documents\UTN\4to\Sim\SIM2019UTN\SIM2019UTN\TPN1_SIM\bin\Debug\TPN1_SIM.pdb
+C:\Users\User\Documents\UTN\4to\Sim\SIM2019UTN\SIM2019UTN\TPN1_SIM\bin\Debug\TPN1_SIM.xml
+C:\Users\User\Documents\UTN\4to\Sim\SIM2019UTN\SIM2019UTN\TPN1_SIM\obj\Debug\TPN1_SIM.vbprojAssemblyReference.cache
+C:\Users\User\Documents\UTN\4to\Sim\SIM2019UTN\SIM2019UTN\TPN1_SIM\obj\Debug\TPN1_SIM.ChiCuadrado.resources
+C:\Users\User\Documents\UTN\4to\Sim\SIM2019UTN\SIM2019UTN\TPN1_SIM\obj\Debug\TPN1_SIM.Congruencial_multiplicativo.resources
+C:\Users\User\Documents\UTN\4to\Sim\SIM2019UTN\SIM2019UTN\TPN1_SIM\obj\Debug\TPN1_SIM.Congruencial_mixto.resources
+C:\Users\User\Documents\UTN\4to\Sim\SIM2019UTN\SIM2019UTN\TPN1_SIM\obj\Debug\TPN1_SIM.Menu.resources
+C:\Users\User\Documents\UTN\4to\Sim\SIM2019UTN\SIM2019UTN\TPN1_SIM\obj\Debug\TPN1_SIM.Resources.resources
+C:\Users\User\Documents\UTN\4to\Sim\SIM2019UTN\SIM2019UTN\TPN1_SIM\obj\Debug\TPN1_SIM.vbproj.GenerateResource.cache
+C:\Users\User\Documents\UTN\4to\Sim\SIM2019UTN\SIM2019UTN\TPN1_SIM\obj\Debug\TPN1_SIM.vbproj.CoreCompileInputs.cache
+C:\Users\User\Documents\UTN\4to\Sim\SIM2019UTN\SIM2019UTN\TPN1_SIM\obj\Debug\TPN1_SIM.exe
+C:\Users\User\Documents\UTN\4to\Sim\SIM2019UTN\SIM2019UTN\TPN1_SIM\obj\Debug\TPN1_SIM.xml
+C:\Users\User\Documents\UTN\4to\Sim\SIM2019UTN\SIM2019UTN\TPN1_SIM\obj\Debug\TPN1_SIM.pdb
+C:\Users\User\Documents\UTN\4to\Sim\SIM2019UTN\SIM2019UTN\TPN1_SIM\obj\Debug\TPN1_SIM.PuntoC.resources
