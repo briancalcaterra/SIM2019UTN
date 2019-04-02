@@ -9,6 +9,7 @@ Public Class Congruencial_mixto
     'La serie generada debe por ser vista (bajar a archivo o visualizar en pantalla).
     'c)	Lo mismo que el punto anterior, pero utilizando el método congruencial mixto.
     'Declaracion de variables que contendran a los valores ingresados por el usuario
+
     'xo: valor semilla
     'g: exponente para calcular m
     'k: cantidad de intervalos

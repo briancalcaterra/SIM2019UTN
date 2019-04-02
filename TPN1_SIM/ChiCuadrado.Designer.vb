@@ -23,10 +23,10 @@ Partial Class ChiCuadrado
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ChiCuadrado))
-        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series3 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim Series4 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -117,7 +117,7 @@ Partial Class ChiCuadrado
         Me.txt_intervalos.Mask = "999999"
         Me.txt_intervalos.Name = "txt_intervalos"
         Me.txt_intervalos.Size = New System.Drawing.Size(152, 27)
-        Me.txt_intervalos.TabIndex = 11
+        Me.txt_intervalos.TabIndex = 1
         Me.txt_intervalos.ValidatingType = GetType(Integer)
         '
         'txt_cantidad_muestras
@@ -127,7 +127,7 @@ Partial Class ChiCuadrado
         Me.txt_cantidad_muestras.Mask = "9999999"
         Me.txt_cantidad_muestras.Name = "txt_cantidad_muestras"
         Me.txt_cantidad_muestras.Size = New System.Drawing.Size(144, 27)
-        Me.txt_cantidad_muestras.TabIndex = 1
+        Me.txt_cantidad_muestras.TabIndex = 0
         '
         'btn_graficar
         '
@@ -218,22 +218,23 @@ Partial Class ChiCuadrado
         '
         'grafico_chi_cuadrado
         '
-        ChartArea2.Name = "ChartArea1"
-        Me.grafico_chi_cuadrado.ChartAreas.Add(ChartArea2)
-        Legend2.Name = "Legend1"
-        Me.grafico_chi_cuadrado.Legends.Add(Legend2)
-        Me.grafico_chi_cuadrado.Location = New System.Drawing.Point(29, 528)
+        ChartArea1.Name = "ChartArea1"
+        Me.grafico_chi_cuadrado.ChartAreas.Add(ChartArea1)
+        Legend1.Name = "Legend1"
+        Me.grafico_chi_cuadrado.Legends.Add(Legend1)
+        Me.grafico_chi_cuadrado.Location = New System.Drawing.Point(32, 496)
         Me.grafico_chi_cuadrado.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.grafico_chi_cuadrado.Name = "grafico_chi_cuadrado"
-        Series3.ChartArea = "ChartArea1"
-        Series3.Legend = "Legend1"
-        Series3.Name = "Observado"
-        Series4.ChartArea = "ChartArea1"
-        Series4.Legend = "Legend1"
-        Series4.Name = "Esperado"
-        Me.grafico_chi_cuadrado.Series.Add(Series3)
-        Me.grafico_chi_cuadrado.Series.Add(Series4)
-        Me.grafico_chi_cuadrado.Size = New System.Drawing.Size(958, 339)
+        Me.grafico_chi_cuadrado.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel
+        Series1.ChartArea = "ChartArea1"
+        Series1.Legend = "Legend1"
+        Series1.Name = "Observado"
+        Series2.ChartArea = "ChartArea1"
+        Series2.Legend = "Legend1"
+        Series2.Name = "Esperado"
+        Me.grafico_chi_cuadrado.Series.Add(Series1)
+        Me.grafico_chi_cuadrado.Series.Add(Series2)
+        Me.grafico_chi_cuadrado.Size = New System.Drawing.Size(958, 360)
         Me.grafico_chi_cuadrado.TabIndex = 21
         Me.grafico_chi_cuadrado.Text = "Chart1"
         '
@@ -241,10 +242,10 @@ Partial Class ChiCuadrado
         '
         Me.grilla_serie.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.grilla_serie.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.col_numero, Me.col_num})
-        Me.grilla_serie.Location = New System.Drawing.Point(1077, 133)
+        Me.grilla_serie.Location = New System.Drawing.Point(1077, 236)
         Me.grilla_serie.Name = "grilla_serie"
         Me.grilla_serie.RowTemplate.Height = 24
-        Me.grilla_serie.Size = New System.Drawing.Size(240, 698)
+        Me.grilla_serie.Size = New System.Drawing.Size(240, 556)
         Me.grilla_serie.TabIndex = 22
         '
         'col_numero
@@ -262,22 +263,22 @@ Partial Class ChiCuadrado
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.DeepSkyBlue
         Me.Label3.Location = New System.Drawing.Point(28, 105)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(56, 19)
+        Me.Label3.Size = New System.Drawing.Size(66, 22)
         Me.Label3.TabIndex = 23
         Me.Label3.Text = "Grilla:"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.DeepSkyBlue
-        Me.Label4.Location = New System.Drawing.Point(418, 507)
+        Me.Label4.Location = New System.Drawing.Point(413, 459)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(72, 19)
+        Me.Label4.Size = New System.Drawing.Size(85, 22)
         Me.Label4.TabIndex = 24
         Me.Label4.Text = "Grafico:"
         '
@@ -286,7 +287,7 @@ Partial Class ChiCuadrado
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.DeepSkyBlue
-        Me.Label5.Location = New System.Drawing.Point(1073, 105)
+        Me.Label5.Location = New System.Drawing.Point(1073, 197)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(155, 19)
         Me.Label5.TabIndex = 25
@@ -295,11 +296,11 @@ Partial Class ChiCuadrado
         'lbl_GradosDeLibrtad
         '
         Me.lbl_GradosDeLibrtad.AutoSize = True
-        Me.lbl_GradosDeLibrtad.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_GradosDeLibrtad.ForeColor = System.Drawing.Color.DeepSkyBlue
-        Me.lbl_GradosDeLibrtad.Location = New System.Drawing.Point(12, 462)
+        Me.lbl_GradosDeLibrtad.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_GradosDeLibrtad.ForeColor = System.Drawing.Color.Magenta
+        Me.lbl_GradosDeLibrtad.Location = New System.Drawing.Point(1055, 133)
         Me.lbl_GradosDeLibrtad.Name = "lbl_GradosDeLibrtad"
-        Me.lbl_GradosDeLibrtad.Size = New System.Drawing.Size(167, 19)
+        Me.lbl_GradosDeLibrtad.Size = New System.Drawing.Size(196, 22)
         Me.lbl_GradosDeLibrtad.TabIndex = 26
         Me.lbl_GradosDeLibrtad.Text = "Grados de Libertad:"
         '

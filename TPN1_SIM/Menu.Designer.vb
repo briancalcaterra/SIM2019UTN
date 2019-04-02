@@ -40,7 +40,7 @@ Partial Class Menu
         Me.btn_multiplicativo.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_multiplicativo.Name = "btn_multiplicativo"
         Me.btn_multiplicativo.Size = New System.Drawing.Size(177, 66)
-        Me.btn_multiplicativo.TabIndex = 8
+        Me.btn_multiplicativo.TabIndex = 1
         Me.btn_multiplicativo.Text = "Congruencial Multiplicativo"
         Me.btn_multiplicativo.UseVisualStyleBackColor = False
         '
@@ -54,7 +54,7 @@ Partial Class Menu
         Me.bnt_mixto.Margin = New System.Windows.Forms.Padding(4)
         Me.bnt_mixto.Name = "bnt_mixto"
         Me.bnt_mixto.Size = New System.Drawing.Size(175, 66)
-        Me.bnt_mixto.TabIndex = 9
+        Me.bnt_mixto.TabIndex = 0
         Me.bnt_mixto.Text = "Congruencial Mixto"
         Me.bnt_mixto.UseVisualStyleBackColor = False
         '
@@ -68,7 +68,7 @@ Partial Class Menu
         Me.bnt_puntoB.Margin = New System.Windows.Forms.Padding(4)
         Me.bnt_puntoB.Name = "bnt_puntoB"
         Me.bnt_puntoB.Size = New System.Drawing.Size(175, 66)
-        Me.bnt_puntoB.TabIndex = 10
+        Me.bnt_puntoB.TabIndex = 2
         Me.bnt_puntoB.Text = "Punto B"
         Me.bnt_puntoB.UseVisualStyleBackColor = False
         '
@@ -82,7 +82,7 @@ Partial Class Menu
         Me.bnt_puntoC.Margin = New System.Windows.Forms.Padding(4)
         Me.bnt_puntoC.Name = "bnt_puntoC"
         Me.bnt_puntoC.Size = New System.Drawing.Size(175, 66)
-        Me.bnt_puntoC.TabIndex = 11
+        Me.bnt_puntoC.TabIndex = 3
         Me.bnt_puntoC.Text = "Punto C"
         Me.bnt_puntoC.UseVisualStyleBackColor = False
         '

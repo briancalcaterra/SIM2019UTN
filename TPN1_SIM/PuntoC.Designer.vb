@@ -22,10 +22,10 @@ Partial Class PuntoC
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series3 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim Series4 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(PuntoC))
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -44,14 +44,22 @@ Partial Class PuntoC
         Me.Col_EstadisticoAcum = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.btn_limpiar = New System.Windows.Forms.Button()
         Me.btn_graficar = New System.Windows.Forms.Button()
+        Me.lbl_GradosDeLibrtad = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.txt_cantidad_muestras = New System.Windows.Forms.MaskedTextBox()
-        Me.rbtn_veinte = New System.Windows.Forms.RadioButton()
-        Me.rbtn_diez = New System.Windows.Forms.RadioButton()
-        Me.rbtn_cinco = New System.Windows.Forms.RadioButton()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.txt_exponente = New System.Windows.Forms.MaskedTextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.txt_intervalos = New System.Windows.Forms.MaskedTextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.txt_constante_a = New System.Windows.Forms.TextBox()
+        Me.txt_periodo_max = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.txt_constante_c = New System.Windows.Forms.MaskedTextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.txt_semilla = New System.Windows.Forms.MaskedTextBox()
+        Me.txt_cant_muestras = New System.Windows.Forms.MaskedTextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
         CType(Me.grilla_serie, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.grafico_chi_cuadrado, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.grilla_chi_cuadrado, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -63,7 +71,7 @@ Partial Class PuntoC
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.DeepSkyBlue
-        Me.Label5.Location = New System.Drawing.Point(968, 88)
+        Me.Label5.Location = New System.Drawing.Point(941, 249)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(155, 19)
         Me.Label5.TabIndex = 34
@@ -74,7 +82,7 @@ Partial Class PuntoC
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.DeepSkyBlue
-        Me.Label4.Location = New System.Drawing.Point(28, 455)
+        Me.Label4.Location = New System.Drawing.Point(390, 479)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(72, 19)
         Me.Label4.TabIndex = 33
@@ -85,7 +93,7 @@ Partial Class PuntoC
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.DeepSkyBlue
-        Me.Label3.Location = New System.Drawing.Point(28, 88)
+        Me.Label3.Location = New System.Drawing.Point(28, 127)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(56, 19)
         Me.Label3.TabIndex = 32
@@ -95,7 +103,7 @@ Partial Class PuntoC
         '
         Me.grilla_serie.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.grilla_serie.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.col_numero, Me.col_num})
-        Me.grilla_serie.Location = New System.Drawing.Point(948, 127)
+        Me.grilla_serie.Location = New System.Drawing.Point(957, 281)
         Me.grilla_serie.Name = "grilla_serie"
         Me.grilla_serie.RowTemplate.Height = 24
         Me.grilla_serie.Size = New System.Drawing.Size(240, 508)
@@ -115,22 +123,23 @@ Partial Class PuntoC
         '
         'grafico_chi_cuadrado
         '
-        ChartArea1.Name = "ChartArea1"
-        Me.grafico_chi_cuadrado.ChartAreas.Add(ChartArea1)
-        Legend1.Name = "Legend1"
-        Me.grafico_chi_cuadrado.Legends.Add(Legend1)
-        Me.grafico_chi_cuadrado.Location = New System.Drawing.Point(12, 476)
+        ChartArea2.Name = "ChartArea1"
+        Me.grafico_chi_cuadrado.ChartAreas.Add(ChartArea2)
+        Legend2.Name = "Legend1"
+        Me.grafico_chi_cuadrado.Legends.Add(Legend2)
+        Me.grafico_chi_cuadrado.Location = New System.Drawing.Point(12, 509)
         Me.grafico_chi_cuadrado.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.grafico_chi_cuadrado.Name = "grafico_chi_cuadrado"
-        Series1.ChartArea = "ChartArea1"
-        Series1.Legend = "Legend1"
-        Series1.Name = "Observado"
-        Series2.ChartArea = "ChartArea1"
-        Series2.Legend = "Legend1"
-        Series2.Name = "Esperado"
-        Me.grafico_chi_cuadrado.Series.Add(Series1)
-        Me.grafico_chi_cuadrado.Series.Add(Series2)
-        Me.grafico_chi_cuadrado.Size = New System.Drawing.Size(873, 309)
+        Me.grafico_chi_cuadrado.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel
+        Series3.ChartArea = "ChartArea1"
+        Series3.Legend = "Legend1"
+        Series3.Name = "Observado"
+        Series4.ChartArea = "ChartArea1"
+        Series4.Legend = "Legend1"
+        Series4.Name = "Esperado"
+        Me.grafico_chi_cuadrado.Series.Add(Series3)
+        Me.grafico_chi_cuadrado.Series.Add(Series4)
+        Me.grafico_chi_cuadrado.Size = New System.Drawing.Size(873, 349)
         Me.grafico_chi_cuadrado.TabIndex = 30
         Me.grafico_chi_cuadrado.Text = "Chart1"
         '
@@ -138,11 +147,11 @@ Partial Class PuntoC
         '
         Me.grilla_chi_cuadrado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.grilla_chi_cuadrado.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Intervalos, Me.Col_Fo, Me.Col_fe, Me.Col_fomenosfe, Me.Col_Cuadrado, Me.Col_EstadisticoCalculado, Me.Col_EstadisticoAcum})
-        Me.grilla_chi_cuadrado.Location = New System.Drawing.Point(12, 127)
+        Me.grilla_chi_cuadrado.Location = New System.Drawing.Point(12, 162)
         Me.grilla_chi_cuadrado.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.grilla_chi_cuadrado.Name = "grilla_chi_cuadrado"
         Me.grilla_chi_cuadrado.RowTemplate.Height = 24
-        Me.grilla_chi_cuadrado.Size = New System.Drawing.Size(873, 303)
+        Me.grilla_chi_cuadrado.Size = New System.Drawing.Size(873, 298)
         Me.grilla_chi_cuadrado.TabIndex = 29
         '
         'Intervalos
@@ -193,11 +202,11 @@ Partial Class PuntoC
         Me.btn_limpiar.ForeColor = System.Drawing.Color.DeepSkyBlue
         Me.btn_limpiar.Image = CType(resources.GetObject("btn_limpiar.Image"), System.Drawing.Image)
         Me.btn_limpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_limpiar.Location = New System.Drawing.Point(1029, 10)
+        Me.btn_limpiar.Location = New System.Drawing.Point(1149, 127)
         Me.btn_limpiar.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_limpiar.Name = "btn_limpiar"
         Me.btn_limpiar.Size = New System.Drawing.Size(159, 55)
-        Me.btn_limpiar.TabIndex = 27
+        Me.btn_limpiar.TabIndex = 1
         Me.btn_limpiar.Text = "Limpiar"
         Me.btn_limpiar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btn_limpiar.UseVisualStyleBackColor = False
@@ -210,80 +219,178 @@ Partial Class PuntoC
         Me.btn_graficar.ForeColor = System.Drawing.Color.DeepSkyBlue
         Me.btn_graficar.Image = CType(resources.GetObject("btn_graficar.Image"), System.Drawing.Image)
         Me.btn_graficar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_graficar.Location = New System.Drawing.Point(834, 10)
+        Me.btn_graficar.Location = New System.Drawing.Point(945, 127)
         Me.btn_graficar.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_graficar.Name = "btn_graficar"
         Me.btn_graficar.Size = New System.Drawing.Size(163, 55)
-        Me.btn_graficar.TabIndex = 26
+        Me.btn_graficar.TabIndex = 0
         Me.btn_graficar.Text = "Ver Grafico"
         Me.btn_graficar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btn_graficar.UseVisualStyleBackColor = False
         '
+        'lbl_GradosDeLibrtad
+        '
+        Me.lbl_GradosDeLibrtad.AutoSize = True
+        Me.lbl_GradosDeLibrtad.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_GradosDeLibrtad.ForeColor = System.Drawing.Color.Magenta
+        Me.lbl_GradosDeLibrtad.Location = New System.Drawing.Point(941, 208)
+        Me.lbl_GradosDeLibrtad.Name = "lbl_GradosDeLibrtad"
+        Me.lbl_GradosDeLibrtad.Size = New System.Drawing.Size(196, 22)
+        Me.lbl_GradosDeLibrtad.TabIndex = 35
+        Me.lbl_GradosDeLibrtad.Text = "Grados de Libertad:"
+        '
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.GroupBox1.Controls.Add(Me.txt_cantidad_muestras)
-        Me.GroupBox1.Controls.Add(Me.rbtn_veinte)
-        Me.GroupBox1.Controls.Add(Me.rbtn_diez)
-        Me.GroupBox1.Controls.Add(Me.rbtn_cinco)
-        Me.GroupBox1.Controls.Add(Me.Label7)
-        Me.GroupBox1.Controls.Add(Me.Label2)
+        Me.GroupBox1.Controls.Add(Me.txt_exponente)
+        Me.GroupBox1.Controls.Add(Me.Label8)
+        Me.GroupBox1.Controls.Add(Me.txt_intervalos)
+        Me.GroupBox1.Controls.Add(Me.Label9)
+        Me.GroupBox1.Controls.Add(Me.txt_constante_a)
+        Me.GroupBox1.Controls.Add(Me.txt_periodo_max)
+        Me.GroupBox1.Controls.Add(Me.Label6)
         Me.GroupBox1.Controls.Add(Me.Label1)
+        Me.GroupBox1.Controls.Add(Me.txt_constante_c)
+        Me.GroupBox1.Controls.Add(Me.Label2)
+        Me.GroupBox1.Controls.Add(Me.txt_semilla)
+        Me.GroupBox1.Controls.Add(Me.txt_cant_muestras)
+        Me.GroupBox1.Controls.Add(Me.Label7)
+        Me.GroupBox1.Controls.Add(Me.Label10)
         Me.GroupBox1.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.Color.DeepSkyBlue
         Me.GroupBox1.Location = New System.Drawing.Point(12, 11)
         Me.GroupBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.GroupBox1.Size = New System.Drawing.Size(718, 71)
-        Me.GroupBox1.TabIndex = 28
+        Me.GroupBox1.Size = New System.Drawing.Size(1311, 103)
+        Me.GroupBox1.TabIndex = 36
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Datos: "
         '
-        'txt_cantidad_muestras
+        'txt_exponente
         '
-        Me.txt_cantidad_muestras.Location = New System.Drawing.Point(147, 33)
-        Me.txt_cantidad_muestras.Margin = New System.Windows.Forms.Padding(4)
-        Me.txt_cantidad_muestras.Mask = "999999"
-        Me.txt_cantidad_muestras.Name = "txt_cantidad_muestras"
-        Me.txt_cantidad_muestras.Size = New System.Drawing.Size(144, 27)
-        Me.txt_cantidad_muestras.TabIndex = 1
+        Me.txt_exponente.Location = New System.Drawing.Point(493, 59)
+        Me.txt_exponente.Margin = New System.Windows.Forms.Padding(4)
+        Me.txt_exponente.Mask = "999999"
+        Me.txt_exponente.Name = "txt_exponente"
+        Me.txt_exponente.Size = New System.Drawing.Size(160, 27)
+        Me.txt_exponente.TabIndex = 3
         '
-        'rbtn_veinte
+        'Label8
         '
-        Me.rbtn_veinte.AutoSize = True
-        Me.rbtn_veinte.Location = New System.Drawing.Point(597, 36)
-        Me.rbtn_veinte.Margin = New System.Windows.Forms.Padding(4)
-        Me.rbtn_veinte.Name = "rbtn_veinte"
-        Me.rbtn_veinte.Size = New System.Drawing.Size(48, 23)
-        Me.rbtn_veinte.TabIndex = 4
-        Me.rbtn_veinte.TabStop = True
-        Me.rbtn_veinte.Text = "20"
-        Me.rbtn_veinte.UseVisualStyleBackColor = True
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label8.Location = New System.Drawing.Point(354, 68)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(116, 19)
+        Me.Label8.TabIndex = 31
+        Me.Label8.Text = "Exponente (g):"
         '
-        'rbtn_diez
+        'txt_intervalos
         '
-        Me.rbtn_diez.AutoSize = True
-        Me.rbtn_diez.Location = New System.Drawing.Point(508, 36)
-        Me.rbtn_diez.Margin = New System.Windows.Forms.Padding(4)
-        Me.rbtn_diez.Name = "rbtn_diez"
-        Me.rbtn_diez.Size = New System.Drawing.Size(48, 23)
-        Me.rbtn_diez.TabIndex = 3
-        Me.rbtn_diez.TabStop = True
-        Me.rbtn_diez.Text = "10"
-        Me.rbtn_diez.UseVisualStyleBackColor = True
+        Me.txt_intervalos.Location = New System.Drawing.Point(493, 24)
+        Me.txt_intervalos.Margin = New System.Windows.Forms.Padding(4)
+        Me.txt_intervalos.Mask = "999999"
+        Me.txt_intervalos.Name = "txt_intervalos"
+        Me.txt_intervalos.Size = New System.Drawing.Size(160, 27)
+        Me.txt_intervalos.TabIndex = 2
         '
-        'rbtn_cinco
+        'Label9
         '
-        Me.rbtn_cinco.AutoSize = True
-        Me.rbtn_cinco.Location = New System.Drawing.Point(427, 36)
-        Me.rbtn_cinco.Margin = New System.Windows.Forms.Padding(4)
-        Me.rbtn_cinco.Name = "rbtn_cinco"
-        Me.rbtn_cinco.Size = New System.Drawing.Size(39, 23)
-        Me.rbtn_cinco.TabIndex = 2
-        Me.rbtn_cinco.TabStop = True
-        Me.rbtn_cinco.Text = "5"
-        Me.rbtn_cinco.UseVisualStyleBackColor = True
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label9.Location = New System.Drawing.Point(354, 33)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(108, 19)
+        Me.Label9.TabIndex = 29
+        Me.Label9.Text = "Intervalos (k):"
+        '
+        'txt_constante_a
+        '
+        Me.txt_constante_a.Enabled = False
+        Me.txt_constante_a.Font = New System.Drawing.Font("Arial Narrow", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_constante_a.Location = New System.Drawing.Point(1010, 26)
+        Me.txt_constante_a.Margin = New System.Windows.Forms.Padding(4)
+        Me.txt_constante_a.Name = "txt_constante_a"
+        Me.txt_constante_a.Size = New System.Drawing.Size(160, 27)
+        Me.txt_constante_a.TabIndex = 25
+        '
+        'txt_periodo_max
+        '
+        Me.txt_periodo_max.Enabled = False
+        Me.txt_periodo_max.Font = New System.Drawing.Font("Arial Narrow", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_periodo_max.Location = New System.Drawing.Point(729, 57)
+        Me.txt_periodo_max.Margin = New System.Windows.Forms.Padding(4)
+        Me.txt_periodo_max.Name = "txt_periodo_max"
+        Me.txt_periodo_max.Size = New System.Drawing.Size(160, 27)
+        Me.txt_periodo_max.TabIndex = 24
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label6.Location = New System.Drawing.Point(967, 27)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(35, 19)
+        Me.Label6.TabIndex = 26
+        Me.Label6.Text = "(a):"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label1.Location = New System.Drawing.Point(677, 65)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(39, 19)
+        Me.Label1.TabIndex = 27
+        Me.Label1.Text = "(m):"
+        '
+        'txt_constante_c
+        '
+        Me.txt_constante_c.Location = New System.Drawing.Point(729, 25)
+        Me.txt_constante_c.Margin = New System.Windows.Forms.Padding(4)
+        Me.txt_constante_c.Mask = "999999"
+        Me.txt_constante_c.Name = "txt_constante_c"
+        Me.txt_constante_c.Size = New System.Drawing.Size(160, 27)
+        Me.txt_constante_c.TabIndex = 4
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label2.Location = New System.Drawing.Point(677, 27)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(35, 19)
+        Me.Label2.TabIndex = 22
+        Me.Label2.Text = "(c):"
+        '
+        'txt_semilla
+        '
+        Me.txt_semilla.Location = New System.Drawing.Point(155, 65)
+        Me.txt_semilla.Margin = New System.Windows.Forms.Padding(4)
+        Me.txt_semilla.Mask = "999999"
+        Me.txt_semilla.Name = "txt_semilla"
+        Me.txt_semilla.Size = New System.Drawing.Size(160, 27)
+        Me.txt_semilla.TabIndex = 1
+        '
+        'txt_cant_muestras
+        '
+        Me.txt_cant_muestras.Location = New System.Drawing.Point(155, 30)
+        Me.txt_cant_muestras.Margin = New System.Windows.Forms.Padding(4)
+        Me.txt_cant_muestras.Mask = "999999"
+        Me.txt_cant_muestras.Name = "txt_cant_muestras"
+        Me.txt_cant_muestras.Size = New System.Drawing.Size(160, 27)
+        Me.txt_cant_muestras.TabIndex = 0
         '
         'Label7
         '
@@ -297,34 +404,26 @@ Partial Class PuntoC
         Me.Label7.TabIndex = 10
         Me.Label7.Text = "Muestras (n):"
         '
-        'Label2
+        'Label10
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label2.Location = New System.Drawing.Point(316, 38)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(88, 19)
-        Me.Label2.TabIndex = 10
-        Me.Label2.Text = "Intervalos :"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label1.Location = New System.Drawing.Point(16, 75)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(0, 19)
-        Me.Label1.TabIndex = 8
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label10.Location = New System.Drawing.Point(16, 75)
+        Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(98, 19)
+        Me.Label10.TabIndex = 8
+        Me.Label10.Text = "Semilla(Xo):"
         '
         'PuntoC
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1248, 815)
+        Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.ClientSize = New System.Drawing.Size(1361, 1040)
+        Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.lbl_GradosDeLibrtad)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
@@ -333,7 +432,6 @@ Partial Class PuntoC
         Me.Controls.Add(Me.grilla_chi_cuadrado)
         Me.Controls.Add(Me.btn_limpiar)
         Me.Controls.Add(Me.btn_graficar)
-        Me.Controls.Add(Me.GroupBox1)
         Me.Name = "PuntoC"
         Me.Text = "PuntoC"
         CType(Me.grilla_serie, System.ComponentModel.ISupportInitialize).EndInit()
@@ -363,12 +461,20 @@ Partial Class PuntoC
     Friend WithEvents Col_EstadisticoAcum As DataGridViewTextBoxColumn
     Friend WithEvents btn_limpiar As Button
     Friend WithEvents btn_graficar As Button
+    Friend WithEvents lbl_GradosDeLibrtad As Label
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents txt_cantidad_muestras As MaskedTextBox
-    Friend WithEvents rbtn_veinte As RadioButton
-    Friend WithEvents rbtn_diez As RadioButton
-    Friend WithEvents rbtn_cinco As RadioButton
-    Friend WithEvents Label7 As Label
-    Friend WithEvents Label2 As Label
+    Friend WithEvents txt_constante_a As TextBox
+    Friend WithEvents txt_periodo_max As TextBox
+    Friend WithEvents Label6 As Label
     Friend WithEvents Label1 As Label
+    Friend WithEvents txt_constante_c As MaskedTextBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents txt_semilla As MaskedTextBox
+    Friend WithEvents txt_cant_muestras As MaskedTextBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Label10 As Label
+    Friend WithEvents txt_exponente As MaskedTextBox
+    Friend WithEvents Label8 As Label
+    Friend WithEvents txt_intervalos As MaskedTextBox
+    Friend WithEvents Label9 As Label
 End Class
