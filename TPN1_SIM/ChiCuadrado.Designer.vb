@@ -51,10 +51,14 @@ Partial Class ChiCuadrado
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.lbl_GradosDeLibrtad = New System.Windows.Forms.Label()
+        Me.lbl_chiCuadrado = New System.Windows.Forms.Label()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Label10 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         CType(Me.grilla_chi_cuadrado, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.grafico_chi_cuadrado, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.grilla_serie, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
@@ -137,7 +141,7 @@ Partial Class ChiCuadrado
         Me.btn_graficar.ForeColor = System.Drawing.Color.DeepSkyBlue
         Me.btn_graficar.Image = CType(resources.GetObject("btn_graficar.Image"), System.Drawing.Image)
         Me.btn_graficar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_graficar.Location = New System.Drawing.Point(739, 27)
+        Me.btn_graficar.Location = New System.Drawing.Point(1012, 738)
         Me.btn_graficar.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_graficar.Name = "btn_graficar"
         Me.btn_graficar.Size = New System.Drawing.Size(163, 55)
@@ -154,7 +158,7 @@ Partial Class ChiCuadrado
         Me.btn_limpiar.ForeColor = System.Drawing.Color.DeepSkyBlue
         Me.btn_limpiar.Image = CType(resources.GetObject("btn_limpiar.Image"), System.Drawing.Image)
         Me.btn_limpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_limpiar.Location = New System.Drawing.Point(934, 27)
+        Me.btn_limpiar.Location = New System.Drawing.Point(1203, 738)
         Me.btn_limpiar.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_limpiar.Name = "btn_limpiar"
         Me.btn_limpiar.Size = New System.Drawing.Size(159, 55)
@@ -242,10 +246,10 @@ Partial Class ChiCuadrado
         '
         Me.grilla_serie.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.grilla_serie.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.col_numero, Me.col_num})
-        Me.grilla_serie.Location = New System.Drawing.Point(1077, 236)
+        Me.grilla_serie.Location = New System.Drawing.Point(1106, 173)
         Me.grilla_serie.Name = "grilla_serie"
         Me.grilla_serie.RowTemplate.Height = 24
-        Me.grilla_serie.Size = New System.Drawing.Size(240, 556)
+        Me.grilla_serie.Size = New System.Drawing.Size(240, 538)
         Me.grilla_serie.TabIndex = 22
         '
         'col_numero
@@ -287,7 +291,7 @@ Partial Class ChiCuadrado
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.DeepSkyBlue
-        Me.Label5.Location = New System.Drawing.Point(1073, 197)
+        Me.Label5.Location = New System.Drawing.Point(1118, 133)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(155, 19)
         Me.Label5.TabIndex = 25
@@ -298,19 +302,58 @@ Partial Class ChiCuadrado
         Me.lbl_GradosDeLibrtad.AutoSize = True
         Me.lbl_GradosDeLibrtad.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_GradosDeLibrtad.ForeColor = System.Drawing.Color.Magenta
-        Me.lbl_GradosDeLibrtad.Location = New System.Drawing.Point(1055, 133)
+        Me.lbl_GradosDeLibrtad.Location = New System.Drawing.Point(26, 22)
         Me.lbl_GradosDeLibrtad.Name = "lbl_GradosDeLibrtad"
         Me.lbl_GradosDeLibrtad.Size = New System.Drawing.Size(196, 22)
         Me.lbl_GradosDeLibrtad.TabIndex = 26
         Me.lbl_GradosDeLibrtad.Text = "Grados de Libertad:"
+        '
+        'lbl_chiCuadrado
+        '
+        Me.lbl_chiCuadrado.AutoSize = True
+        Me.lbl_chiCuadrado.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_chiCuadrado.ForeColor = System.Drawing.Color.Magenta
+        Me.lbl_chiCuadrado.Location = New System.Drawing.Point(26, 57)
+        Me.lbl_chiCuadrado.Name = "lbl_chiCuadrado"
+        Me.lbl_chiCuadrado.Size = New System.Drawing.Size(232, 22)
+        Me.lbl_chiCuadrado.TabIndex = 27
+        Me.lbl_chiCuadrado.Text = "Xi Cuadrado calculado :"
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.GroupBox2.Controls.Add(Me.Label10)
+        Me.GroupBox2.Controls.Add(Me.lbl_chiCuadrado)
+        Me.GroupBox2.Controls.Add(Me.lbl_GradosDeLibrtad)
+        Me.GroupBox2.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox2.ForeColor = System.Drawing.Color.DeepSkyBlue
+        Me.GroupBox2.Location = New System.Drawing.Point(740, 11)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.GroupBox2.Size = New System.Drawing.Size(594, 102)
+        Me.GroupBox2.TabIndex = 18
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "Datos Obtenidos : "
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label10.Location = New System.Drawing.Point(16, 75)
+        Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(0, 19)
+        Me.Label10.TabIndex = 8
         '
         'ChiCuadrado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.ClientSize = New System.Drawing.Size(1408, 878)
-        Me.Controls.Add(Me.lbl_GradosDeLibrtad)
+        Me.ClientSize = New System.Drawing.Size(1408, 938)
+        Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
@@ -328,6 +371,8 @@ Partial Class ChiCuadrado
         CType(Me.grilla_chi_cuadrado, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.grafico_chi_cuadrado, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.grilla_serie, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -357,4 +402,7 @@ Partial Class ChiCuadrado
     Friend WithEvents Col_EstadisticoCalculado As DataGridViewTextBoxColumn
     Friend WithEvents Col_EstadisticoAcum As DataGridViewTextBoxColumn
     Friend WithEvents lbl_GradosDeLibrtad As Label
+    Friend WithEvents lbl_chiCuadrado As Label
+    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents Label10 As Label
 End Class

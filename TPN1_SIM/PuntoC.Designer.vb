@@ -60,10 +60,13 @@ Partial Class PuntoC
         Me.txt_cant_muestras = New System.Windows.Forms.MaskedTextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.lbl_chiCuadrado = New System.Windows.Forms.Label()
         CType(Me.grilla_serie, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.grafico_chi_cuadrado, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.grilla_chi_cuadrado, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label5
@@ -71,7 +74,7 @@ Partial Class PuntoC
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.DeepSkyBlue
-        Me.Label5.Location = New System.Drawing.Point(941, 249)
+        Me.Label5.Location = New System.Drawing.Point(922, 244)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(155, 19)
         Me.Label5.TabIndex = 34
@@ -103,10 +106,10 @@ Partial Class PuntoC
         '
         Me.grilla_serie.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.grilla_serie.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.col_numero, Me.col_num})
-        Me.grilla_serie.Location = New System.Drawing.Point(957, 281)
+        Me.grilla_serie.Location = New System.Drawing.Point(926, 284)
         Me.grilla_serie.Name = "grilla_serie"
         Me.grilla_serie.RowTemplate.Height = 24
-        Me.grilla_serie.Size = New System.Drawing.Size(240, 508)
+        Me.grilla_serie.Size = New System.Drawing.Size(240, 419)
         Me.grilla_serie.TabIndex = 31
         '
         'col_numero
@@ -202,7 +205,7 @@ Partial Class PuntoC
         Me.btn_limpiar.ForeColor = System.Drawing.Color.DeepSkyBlue
         Me.btn_limpiar.Image = CType(resources.GetObject("btn_limpiar.Image"), System.Drawing.Image)
         Me.btn_limpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_limpiar.Location = New System.Drawing.Point(1149, 127)
+        Me.btn_limpiar.Location = New System.Drawing.Point(1133, 725)
         Me.btn_limpiar.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_limpiar.Name = "btn_limpiar"
         Me.btn_limpiar.Size = New System.Drawing.Size(159, 55)
@@ -219,7 +222,7 @@ Partial Class PuntoC
         Me.btn_graficar.ForeColor = System.Drawing.Color.DeepSkyBlue
         Me.btn_graficar.Image = CType(resources.GetObject("btn_graficar.Image"), System.Drawing.Image)
         Me.btn_graficar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_graficar.Location = New System.Drawing.Point(945, 127)
+        Me.btn_graficar.Location = New System.Drawing.Point(916, 725)
         Me.btn_graficar.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_graficar.Name = "btn_graficar"
         Me.btn_graficar.Size = New System.Drawing.Size(163, 55)
@@ -233,7 +236,7 @@ Partial Class PuntoC
         Me.lbl_GradosDeLibrtad.AutoSize = True
         Me.lbl_GradosDeLibrtad.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_GradosDeLibrtad.ForeColor = System.Drawing.Color.Magenta
-        Me.lbl_GradosDeLibrtad.Location = New System.Drawing.Point(941, 208)
+        Me.lbl_GradosDeLibrtad.Location = New System.Drawing.Point(6, 34)
         Me.lbl_GradosDeLibrtad.Name = "lbl_GradosDeLibrtad"
         Me.lbl_GradosDeLibrtad.Size = New System.Drawing.Size(196, 22)
         Me.lbl_GradosDeLibrtad.TabIndex = 35
@@ -416,14 +419,41 @@ Partial Class PuntoC
         Me.Label10.TabIndex = 8
         Me.Label10.Text = "Semilla(Xo):"
         '
+        'GroupBox2
+        '
+        Me.GroupBox2.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.GroupBox2.Controls.Add(Me.lbl_chiCuadrado)
+        Me.GroupBox2.Controls.Add(Me.lbl_GradosDeLibrtad)
+        Me.GroupBox2.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox2.ForeColor = System.Drawing.Color.DeepSkyBlue
+        Me.GroupBox2.Location = New System.Drawing.Point(916, 118)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.GroupBox2.Size = New System.Drawing.Size(383, 103)
+        Me.GroupBox2.TabIndex = 37
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "Datos Observados:  "
+        '
+        'lbl_chiCuadrado
+        '
+        Me.lbl_chiCuadrado.AutoSize = True
+        Me.lbl_chiCuadrado.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_chiCuadrado.ForeColor = System.Drawing.Color.Magenta
+        Me.lbl_chiCuadrado.Location = New System.Drawing.Point(6, 69)
+        Me.lbl_chiCuadrado.Name = "lbl_chiCuadrado"
+        Me.lbl_chiCuadrado.Size = New System.Drawing.Size(230, 22)
+        Me.lbl_chiCuadrado.TabIndex = 36
+        Me.lbl_chiCuadrado.Text = "Xi Cuadrado Calculado:"
+        '
         'PuntoC
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.ClientSize = New System.Drawing.Size(1361, 1040)
+        Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.lbl_GradosDeLibrtad)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
@@ -439,6 +469,8 @@ Partial Class PuntoC
         CType(Me.grilla_chi_cuadrado, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -477,4 +509,6 @@ Partial Class PuntoC
     Friend WithEvents Label8 As Label
     Friend WithEvents txt_intervalos As MaskedTextBox
     Friend WithEvents Label9 As Label
+    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents lbl_chiCuadrado As Label
 End Class

@@ -4,9 +4,6 @@ Public Class PuntoC
     Dim g, k, i_ultimo As Integer
     Dim xo, c, a, aleatorio, m, x_mas_1, x_ultimo As Double
 
-    Private Sub PuntoC_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
 
     Private Sub btn_graficar_Click(sender As Object, e As EventArgs) Handles btn_graficar.Click
         Validar_campos()
@@ -92,9 +89,9 @@ Public Class PuntoC
                 grilla_chi_cuadrado.Rows((fila)).Cells(6).Value = est_acumulado
                 fila += 1
             Next
-            grilla_chi_cuadrado.Rows.Add()
-            grilla_chi_cuadrado.Rows((fila)).Cells(5).Value = "Xi Cuadrado calculado"
-            grilla_chi_cuadrado.Rows((fila)).Cells(6).Value = est_acumulado.ToString
+            'grilla_chi_cuadrado.Rows.Add()
+            'grilla_chi_cuadrado.Rows((fila)).Cells(5).Value = "Xi Cuadrado calculado"
+            'grilla_chi_cuadrado.Rows((fila)).Cells(6).Value = est_acumulado.ToString
 
             grafico_chi_cuadrado.Series("Observado").ChartType = SeriesChartType.Column
             grafico_chi_cuadrado.Series("Observado").XValueType = ChartValueType.Double
@@ -103,6 +100,7 @@ Public Class PuntoC
             grafico_chi_cuadrado.Series("Observado").IsVisibleInLegend = True
 
             lbl_GradosDeLibrtad.Text = "Los grados de libertad son: " + (k - 1).ToString
+            lbl_chiCuadrado.Text = "El Xi Cuadrado Calculado es: " + FormatNumber(est_acumulado.ToString, 5)
         End If
     End Sub
 
@@ -132,6 +130,7 @@ Public Class PuntoC
         Me.grafico_chi_cuadrado.Series(0).Points.Clear()
         Me.grafico_chi_cuadrado.Series(1).Points.Clear()
         Me.lbl_GradosDeLibrtad.Text = ""
+        Me.lbl_chiCuadrado.Text = ""
     End Sub
 
     Private Sub btn_limpiar_Click(sender As Object, e As EventArgs) Handles btn_limpiar.Click

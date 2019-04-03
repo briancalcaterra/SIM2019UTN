@@ -25,18 +25,19 @@ Public Class ChiCuadrado
             k = Me.txt_intervalos.Text
             intervalos = Math.Round((1 / k), 4)
             fe = cant_muestras / k
-
+            Dim i As Decimal = 0
             'aca comienza el generador de numeros aleatorios
             Me.grilla_serie.Rows.Clear()
             Me.grilla_chi_cuadrado.Rows.Clear()
             Me.grafico_chi_cuadrado.Series(0).Points.Clear()
             Me.grafico_chi_cuadrado.Series(1).Points.Clear()
 
-            For i As Decimal = 0 To (cant_muestras - 1)
+            Do While i <= (cant_muestras - 1)
                 aleatorio = Rnd()
                 grilla_serie.Rows.Add(i, FormatNumber(aleatorio, 4))
                 lista(i) = aleatorio
-            Next
+                i += 1
+            Loop
 
             fila = 0
             'frecuencia observada
@@ -49,8 +50,8 @@ Public Class ChiCuadrado
                         End If
                     End If
                 Next cont_frecuencia
-                grafico_chi_cuadrado.Series("Observado").Points.AddXY((j + intervalos), fo) ''graficamos el valor observado en el intervalo j
-                grafico_chi_cuadrado.Series("Esperado").Points.AddXY((j + intervalos), fe) 'graficamos el valor del esperado en el intervalo j
+                grafico_chi_cuadrado.Series("Observado").Points.AddXY((j + intervalos), fo) '' aca graficamos el valor observado en el intervalo j
+                grafico_chi_cuadrado.Series("Esperado").Points.AddXY((j + intervalos), fe) ' aca graficamos el valor del esperado en el intervalo j
                 'ahora agregamos una fila en la grilla por cada uno de los intervalos generados
                 grilla_chi_cuadrado.Rows.Add()
                 grilla_chi_cuadrado.Rows((fila)).Cells(0).Value = j.ToString + "-" + (j + intervalos).ToString
@@ -67,9 +68,9 @@ Public Class ChiCuadrado
                 grilla_chi_cuadrado.Rows((fila)).Cells(6).Value = est_acumulado
                 fila += 1
             Next
-            grilla_chi_cuadrado.Rows.Add()
-            grilla_chi_cuadrado.Rows((fila)).Cells(5).Value = "Xi Cuadrado calculado"
-            grilla_chi_cuadrado.Rows((fila)).Cells(6).Value = est_acumulado.ToString
+            'grilla_chi_cuadrado.Rows.Add()
+            'grilla_chi_cuadrado.Rows((fila)).Cells(5).Value = "Xi Cuadrado calculado"
+            'grilla_chi_cuadrado.Rows((fila)).Cells(6).Value = est_acumulado.ToString
 
 
             grafico_chi_cuadrado.Series("Observado").ChartType = SeriesChartType.Column
@@ -78,7 +79,9 @@ Public Class ChiCuadrado
             grafico_chi_cuadrado.ChartAreas(0).AxisX.Interval = intervalos
             grafico_chi_cuadrado.Series("Observado").IsVisibleInLegend = True
 
-            lbl_GradosDeLibrtad.Text = "Los grados de libertad son: " + (k - 1).ToString
+            ''Cambioamos el valor de los datos observados 
+            lbl_GradosDeLibrtad.Text = "Los Grados de Libertad son: " + (k - 1).ToString
+            lbl_chiCuadrado.Text = "El Xi cuadrado calculado es: " + est_acumulado.ToString
 
 
 
@@ -105,6 +108,8 @@ Public Class ChiCuadrado
         Me.grilla_serie.Rows.Clear()
         Me.grafico_chi_cuadrado.Series(0).Points.Clear()
         Me.grafico_chi_cuadrado.Series(1).Points.Clear()
+        Me.lbl_chiCuadrado.Text = ""
+        Me.lbl_GradosDeLibrtad.Text = ""
 
     End Sub
 
