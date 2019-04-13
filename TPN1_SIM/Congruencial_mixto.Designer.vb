@@ -59,7 +59,7 @@ Partial Class Congruencial_mixto
         Me.btn_cargar_aleatorios.Image = CType(resources.GetObject("btn_cargar_aleatorios.Image"), System.Drawing.Image)
         Me.btn_cargar_aleatorios.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btn_cargar_aleatorios.Location = New System.Drawing.Point(37, 321)
-        Me.btn_cargar_aleatorios.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btn_cargar_aleatorios.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_cargar_aleatorios.Name = "btn_cargar_aleatorios"
         Me.btn_cargar_aleatorios.Size = New System.Drawing.Size(175, 66)
         Me.btn_cargar_aleatorios.TabIndex = 1
@@ -72,7 +72,7 @@ Partial Class Congruencial_mixto
         Me.grilla_numeros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.grilla_numeros.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.posicion, Me.rnd})
         Me.grilla_numeros.Location = New System.Drawing.Point(19, 27)
-        Me.grilla_numeros.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.grilla_numeros.Margin = New System.Windows.Forms.Padding(4)
         Me.grilla_numeros.Name = "grilla_numeros"
         Me.grilla_numeros.Size = New System.Drawing.Size(460, 550)
         Me.grilla_numeros.TabIndex = 0
@@ -96,7 +96,7 @@ Partial Class Congruencial_mixto
         Me.btn_limpiar.Image = CType(resources.GetObject("btn_limpiar.Image"), System.Drawing.Image)
         Me.btn_limpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btn_limpiar.Location = New System.Drawing.Point(132, 395)
-        Me.btn_limpiar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btn_limpiar.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_limpiar.Name = "btn_limpiar"
         Me.btn_limpiar.Size = New System.Drawing.Size(160, 69)
         Me.btn_limpiar.TabIndex = 3
@@ -125,7 +125,7 @@ Partial Class Congruencial_mixto
         Me.btn_siguiente.Image = CType(resources.GetObject("btn_siguiente.Image"), System.Drawing.Image)
         Me.btn_siguiente.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btn_siguiente.Location = New System.Drawing.Point(220, 321)
-        Me.btn_siguiente.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btn_siguiente.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_siguiente.Name = "btn_siguiente"
         Me.btn_siguiente.Size = New System.Drawing.Size(173, 66)
         Me.btn_siguiente.TabIndex = 2
@@ -164,7 +164,7 @@ Partial Class Congruencial_mixto
         'txt_constante_c
         '
         Me.txt_constante_c.Location = New System.Drawing.Point(155, 167)
-        Me.txt_constante_c.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_constante_c.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_constante_c.Mask = "999999"
         Me.txt_constante_c.Name = "txt_constante_c"
         Me.txt_constante_c.Size = New System.Drawing.Size(160, 27)
@@ -173,7 +173,7 @@ Partial Class Congruencial_mixto
         'txt_exponente
         '
         Me.txt_exponente.Location = New System.Drawing.Point(155, 133)
-        Me.txt_exponente.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_exponente.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_exponente.Mask = "999999"
         Me.txt_exponente.Name = "txt_exponente"
         Me.txt_exponente.Size = New System.Drawing.Size(160, 27)
@@ -182,7 +182,7 @@ Partial Class Congruencial_mixto
         'txt_intervalos
         '
         Me.txt_intervalos.Location = New System.Drawing.Point(155, 98)
-        Me.txt_intervalos.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_intervalos.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_intervalos.Mask = "999999"
         Me.txt_intervalos.Name = "txt_intervalos"
         Me.txt_intervalos.Size = New System.Drawing.Size(160, 27)
@@ -191,7 +191,7 @@ Partial Class Congruencial_mixto
         'txt_semilla
         '
         Me.txt_semilla.Location = New System.Drawing.Point(155, 65)
-        Me.txt_semilla.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_semilla.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_semilla.Mask = "999999"
         Me.txt_semilla.Name = "txt_semilla"
         Me.txt_semilla.Size = New System.Drawing.Size(160, 27)
@@ -200,7 +200,7 @@ Partial Class Congruencial_mixto
         'txt_cant_muestras
         '
         Me.txt_cant_muestras.Location = New System.Drawing.Point(155, 30)
-        Me.txt_cant_muestras.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_cant_muestras.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_cant_muestras.Mask = "999999"
         Me.txt_cant_muestras.Name = "txt_cant_muestras"
         Me.txt_cant_muestras.Size = New System.Drawing.Size(160, 27)
@@ -211,7 +211,7 @@ Partial Class Congruencial_mixto
         Me.txt_constante_a.Enabled = False
         Me.txt_constante_a.Font = New System.Drawing.Font("Arial Narrow", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_constante_a.Location = New System.Drawing.Point(155, 233)
-        Me.txt_constante_a.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_constante_a.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_constante_a.Name = "txt_constante_a"
         Me.txt_constante_a.Size = New System.Drawing.Size(160, 27)
         Me.txt_constante_a.TabIndex = 6
@@ -221,7 +221,7 @@ Partial Class Congruencial_mixto
         Me.txt_periodo_max.Enabled = False
         Me.txt_periodo_max.Font = New System.Drawing.Font("Arial Narrow", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_periodo_max.Location = New System.Drawing.Point(155, 199)
-        Me.txt_periodo_max.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_periodo_max.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_periodo_max.Name = "txt_periodo_max"
         Me.txt_periodo_max.Size = New System.Drawing.Size(160, 27)
         Me.txt_periodo_max.TabIndex = 5
@@ -282,9 +282,9 @@ Partial Class Congruencial_mixto
         Me.Label2.Location = New System.Drawing.Point(16, 107)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(108, 19)
+        Me.Label2.Size = New System.Drawing.Size(34, 19)
         Me.Label2.TabIndex = 10
-        Me.Label2.Text = "Intervalos (k):"
+        Me.Label2.Text = "(k):"
         '
         'Label1
         '
@@ -323,7 +323,7 @@ Partial Class Congruencial_mixto
         Me.Controls.Add(Me.btn_siguiente)
         Me.Controls.Add(Me.btn_limpiar)
         Me.Controls.Add(Me.btn_cargar_aleatorios)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Congruencial_mixto"
         Me.Text = "Congruencial Mixto"
         CType(Me.grilla_numeros, System.ComponentModel.ISupportInitialize).EndInit()

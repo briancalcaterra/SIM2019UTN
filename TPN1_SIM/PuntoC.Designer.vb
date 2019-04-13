@@ -22,10 +22,10 @@ Partial Class PuntoC
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series3 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim Series4 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(PuntoC))
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -126,22 +126,22 @@ Partial Class PuntoC
         '
         'grafico_chi_cuadrado
         '
-        ChartArea2.Name = "ChartArea1"
-        Me.grafico_chi_cuadrado.ChartAreas.Add(ChartArea2)
-        Legend2.Name = "Legend1"
-        Me.grafico_chi_cuadrado.Legends.Add(Legend2)
+        ChartArea1.Name = "ChartArea1"
+        Me.grafico_chi_cuadrado.ChartAreas.Add(ChartArea1)
+        Legend1.Name = "Legend1"
+        Me.grafico_chi_cuadrado.Legends.Add(Legend1)
         Me.grafico_chi_cuadrado.Location = New System.Drawing.Point(12, 509)
         Me.grafico_chi_cuadrado.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.grafico_chi_cuadrado.Name = "grafico_chi_cuadrado"
         Me.grafico_chi_cuadrado.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel
-        Series3.ChartArea = "ChartArea1"
-        Series3.Legend = "Legend1"
-        Series3.Name = "Observado"
-        Series4.ChartArea = "ChartArea1"
-        Series4.Legend = "Legend1"
-        Series4.Name = "Esperado"
-        Me.grafico_chi_cuadrado.Series.Add(Series3)
-        Me.grafico_chi_cuadrado.Series.Add(Series4)
+        Series1.ChartArea = "ChartArea1"
+        Series1.Legend = "Legend1"
+        Series1.Name = "Observado"
+        Series2.ChartArea = "ChartArea1"
+        Series2.Legend = "Legend1"
+        Series2.Name = "Esperado"
+        Me.grafico_chi_cuadrado.Series.Add(Series1)
+        Me.grafico_chi_cuadrado.Series.Add(Series2)
         Me.grafico_chi_cuadrado.Size = New System.Drawing.Size(873, 349)
         Me.grafico_chi_cuadrado.TabIndex = 30
         Me.grafico_chi_cuadrado.Text = "Chart1"

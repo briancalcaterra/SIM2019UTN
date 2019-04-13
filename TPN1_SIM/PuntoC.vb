@@ -4,6 +4,9 @@ Public Class PuntoC
     Dim g, k, i_ultimo As Integer
     Dim xo, c, a, aleatorio, m, x_mas_1, x_ultimo As Double
 
+    Private Sub PuntoC_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 
     Private Sub btn_graficar_Click(sender As Object, e As EventArgs) Handles btn_graficar.Click
         Validar_campos()
@@ -92,7 +95,7 @@ Public Class PuntoC
             'grilla_chi_cuadrado.Rows.Add()
             'grilla_chi_cuadrado.Rows((fila)).Cells(5).Value = "Xi Cuadrado calculado"
             'grilla_chi_cuadrado.Rows((fila)).Cells(6).Value = est_acumulado.ToString
-
+            ''Grafico
             grafico_chi_cuadrado.Series("Observado").ChartType = SeriesChartType.Column
             grafico_chi_cuadrado.Series("Observado").XValueType = ChartValueType.Double
             grafico_chi_cuadrado.Series("Observado").YValueType = ChartValueType.Int32
