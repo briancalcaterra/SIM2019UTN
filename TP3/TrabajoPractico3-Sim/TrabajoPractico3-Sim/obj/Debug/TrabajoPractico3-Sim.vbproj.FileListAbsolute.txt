@@ -1,0 +1,14 @@
+C:\Users\User\AppData\Local\Temporary Projects\TrabajoPractico3-Sim\bin\Debug\TrabajoPractico3-Sim.exe.config
+C:\Users\User\AppData\Local\Temporary Projects\TrabajoPractico3-Sim\bin\Debug\TrabajoPractico3-Sim.exe
+C:\Users\User\AppData\Local\Temporary Projects\TrabajoPractico3-Sim\bin\Debug\TrabajoPractico3-Sim.pdb
+C:\Users\User\AppData\Local\Temporary Projects\TrabajoPractico3-Sim\bin\Debug\TrabajoPractico3-Sim.xml
+C:\Users\User\AppData\Local\Temporary Projects\TrabajoPractico3-Sim\obj\Debug\TrabajoPractico3-Sim.vbprojAssemblyReference.cache
+C:\Users\User\AppData\Local\Temporary Projects\TrabajoPractico3-Sim\obj\Debug\TrabajoPractico3_Sim.Menu.resources
+C:\Users\User\AppData\Local\Temporary Projects\TrabajoPractico3-Sim\obj\Debug\TrabajoPractico3_Sim.Resources.resources
+C:\Users\User\AppData\Local\Temporary Projects\TrabajoPractico3-Sim\obj\Debug\TrabajoPractico3-Sim.vbproj.GenerateResource.cache
+C:\Users\User\AppData\Local\Temporary Projects\TrabajoPractico3-Sim\obj\Debug\TrabajoPractico3-Sim.vbproj.CoreCompileInputs.cache
+C:\Users\User\AppData\Local\Temporary Projects\TrabajoPractico3-Sim\obj\Debug\TrabajoPractico3-Sim.exe
+C:\Users\User\AppData\Local\Temporary Projects\TrabajoPractico3-Sim\obj\Debug\TrabajoPractico3-Sim.xml
+C:\Users\User\AppData\Local\Temporary Projects\TrabajoPractico3-Sim\obj\Debug\TrabajoPractico3-Sim.pdb
+C:\Users\User\AppData\Local\Temporary Projects\TrabajoPractico3-Sim\obj\Debug\TrabajoPractico3_Sim.Normal.resources
+C:\Users\User\AppData\Local\Temporary Projects\TrabajoPractico3-Sim\obj\Debug\TrabajoPractico3_Sim.Uniforme.resources
