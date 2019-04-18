@@ -22,54 +22,63 @@ Partial Class Normal
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim ChartArea3 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend3 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series5 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim Series6 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.MaskedTextBox4 = New System.Windows.Forms.MaskedTextBox()
-        Me.MaskedTextBox3 = New System.Windows.Forms.MaskedTextBox()
-        Me.MaskedTextBox2 = New System.Windows.Forms.MaskedTextBox()
-        Me.MaskedTextBox1 = New System.Windows.Forms.MaskedTextBox()
+        Me.rb_veinte = New System.Windows.Forms.RadioButton()
+        Me.rb_diez = New System.Windows.Forms.RadioButton()
+        Me.rb_cinco = New System.Windows.Forms.RadioButton()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.txt_desviacion = New System.Windows.Forms.MaskedTextBox()
+        Me.txt_media = New System.Windows.Forms.MaskedTextBox()
+        Me.txt_cant_numeros = New System.Windows.Forms.MaskedTextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.dtgNormal = New System.Windows.Forms.DataGridView()
-        Me.intervalos = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.z = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.fo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.probabilidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.fe = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dtgXiCuadradoNormal = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.xiCuadradoNormal = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Chart1 = New System.Windows.Forms.DataVisualization.Charting.Chart()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.grafico_normal = New System.Windows.Forms.DataVisualization.Charting.Chart()
+        Me.btn_limpiar = New System.Windows.Forms.Button()
+        Me.btn_generar = New System.Windows.Forms.Button()
+        Me.grilla_numeros_aleatorios = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.lbl_grados_libertad = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.lbl_chi_cuadrado_calculado = New System.Windows.Forms.Label()
+        Me.xiCuadradoNormal = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dtgXiCuadradoNormal = New System.Windows.Forms.DataGridView()
+        Me.fe = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.probabilidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.fo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.z = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.intervalos = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dtgNormal = New System.Windows.Forms.DataGridView()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.dtgNormal, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.grafico_normal, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.grilla_numeros_aleatorios, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dtgXiCuadradoNormal, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Chart1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dtgNormal, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.GroupBox1.Controls.Add(Me.rb_veinte)
+        Me.GroupBox1.Controls.Add(Me.rb_diez)
+        Me.GroupBox1.Controls.Add(Me.rb_cinco)
         Me.GroupBox1.Controls.Add(Me.Label8)
-        Me.GroupBox1.Controls.Add(Me.MaskedTextBox4)
-        Me.GroupBox1.Controls.Add(Me.MaskedTextBox3)
-        Me.GroupBox1.Controls.Add(Me.MaskedTextBox2)
-        Me.GroupBox1.Controls.Add(Me.MaskedTextBox1)
+        Me.GroupBox1.Controls.Add(Me.txt_desviacion)
+        Me.GroupBox1.Controls.Add(Me.txt_media)
+        Me.GroupBox1.Controls.Add(Me.txt_cant_numeros)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label5)
@@ -79,43 +88,80 @@ Partial Class Normal
         Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4)
-        Me.GroupBox1.Size = New System.Drawing.Size(668, 100)
+        Me.GroupBox1.Size = New System.Drawing.Size(1159, 100)
         Me.GroupBox1.TabIndex = 46
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Datos:"
         '
-        'MaskedTextBox4
+        'rb_veinte
         '
-        Me.MaskedTextBox4.Location = New System.Drawing.Point(489, 71)
-        Me.MaskedTextBox4.Name = "MaskedTextBox4"
-        Me.MaskedTextBox4.Size = New System.Drawing.Size(73, 27)
-        Me.MaskedTextBox4.TabIndex = 6
+        Me.rb_veinte.AutoSize = True
+        Me.rb_veinte.Location = New System.Drawing.Point(832, 47)
+        Me.rb_veinte.Name = "rb_veinte"
+        Me.rb_veinte.Size = New System.Drawing.Size(50, 24)
+        Me.rb_veinte.TabIndex = 8
+        Me.rb_veinte.TabStop = True
+        Me.rb_veinte.Text = "20"
+        Me.rb_veinte.UseVisualStyleBackColor = True
         '
-        'MaskedTextBox3
+        'rb_diez
         '
-        Me.MaskedTextBox3.Location = New System.Drawing.Point(306, 33)
-        Me.MaskedTextBox3.Name = "MaskedTextBox3"
-        Me.MaskedTextBox3.Size = New System.Drawing.Size(73, 27)
-        Me.MaskedTextBox3.TabIndex = 5
+        Me.rb_diez.AutoSize = True
+        Me.rb_diez.Location = New System.Drawing.Point(663, 47)
+        Me.rb_diez.Name = "rb_diez"
+        Me.rb_diez.Size = New System.Drawing.Size(50, 24)
+        Me.rb_diez.TabIndex = 8
+        Me.rb_diez.TabStop = True
+        Me.rb_diez.Text = "10"
+        Me.rb_diez.UseVisualStyleBackColor = True
         '
-        'MaskedTextBox2
+        'rb_cinco
         '
-        Me.MaskedTextBox2.Location = New System.Drawing.Point(227, 68)
-        Me.MaskedTextBox2.Name = "MaskedTextBox2"
-        Me.MaskedTextBox2.Size = New System.Drawing.Size(73, 27)
-        Me.MaskedTextBox2.TabIndex = 4
+        Me.rb_cinco.AutoSize = True
+        Me.rb_cinco.Location = New System.Drawing.Point(499, 47)
+        Me.rb_cinco.Name = "rb_cinco"
+        Me.rb_cinco.Size = New System.Drawing.Size(40, 24)
+        Me.rb_cinco.TabIndex = 8
+        Me.rb_cinco.TabStop = True
+        Me.rb_cinco.Text = "5"
+        Me.rb_cinco.UseVisualStyleBackColor = True
         '
-        'MaskedTextBox1
+        'Label8
         '
-        Me.MaskedTextBox1.Location = New System.Drawing.Point(138, 33)
-        Me.MaskedTextBox1.Name = "MaskedTextBox1"
-        Me.MaskedTextBox1.Size = New System.Drawing.Size(73, 27)
-        Me.MaskedTextBox1.TabIndex = 3
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(186, 71)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(114, 20)
+        Me.Label8.TabIndex = 7
+        Me.Label8.Text = "Desviacion: "
+        '
+        'txt_desviacion
+        '
+        Me.txt_desviacion.Location = New System.Drawing.Point(329, 64)
+        Me.txt_desviacion.Name = "txt_desviacion"
+        Me.txt_desviacion.Size = New System.Drawing.Size(73, 27)
+        Me.txt_desviacion.TabIndex = 6
+        '
+        'txt_media
+        '
+        Me.txt_media.Location = New System.Drawing.Point(83, 64)
+        Me.txt_media.Name = "txt_media"
+        Me.txt_media.Size = New System.Drawing.Size(73, 27)
+        Me.txt_media.TabIndex = 5
+        '
+        'txt_cant_numeros
+        '
+        Me.txt_cant_numeros.Location = New System.Drawing.Point(199, 26)
+        Me.txt_cant_numeros.Mask = "999999"
+        Me.txt_cant_numeros.Name = "txt_cant_numeros"
+        Me.txt_cant_numeros.Size = New System.Drawing.Size(73, 27)
+        Me.txt_cant_numeros.TabIndex = 3
+        Me.txt_cant_numeros.ValidatingType = GetType(Integer)
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(235, 36)
+        Me.Label1.Location = New System.Drawing.Point(12, 71)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(65, 20)
         Me.Label1.TabIndex = 2
@@ -126,183 +172,89 @@ Partial Class Normal
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(12, 33)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(120, 20)
+        Me.Label2.Size = New System.Drawing.Size(181, 20)
         Me.Label2.TabIndex = 1
-        Me.Label2.Text = "N° muestras:"
+        Me.Label2.Text = "Tamaño de muestra:"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(12, 68)
+        Me.Label5.Location = New System.Drawing.Point(619, 24)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(209, 20)
         Me.Label5.TabIndex = 0
         Me.Label5.Text = "Cantidad de intervalos :"
         '
-        'Label8
+        'grafico_normal
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(369, 71)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(114, 20)
-        Me.Label8.TabIndex = 7
-        Me.Label8.Text = "Desviacion: "
+        ChartArea1.Name = "ChartArea1"
+        Me.grafico_normal.ChartAreas.Add(ChartArea1)
+        Legend1.Name = "Legend1"
+        Me.grafico_normal.Legends.Add(Legend1)
+        Me.grafico_normal.Location = New System.Drawing.Point(45, 354)
+        Me.grafico_normal.Name = "grafico_normal"
+        Me.grafico_normal.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Berry
+        Series1.ChartArea = "ChartArea1"
+        Series1.Legend = "Legend1"
+        Series1.Name = "Frecuencia Observada"
+        Series2.ChartArea = "ChartArea1"
+        Series2.Legend = "Legend1"
+        Series2.Name = "Frecuencia Esperada"
+        Me.grafico_normal.Series.Add(Series1)
+        Me.grafico_normal.Series.Add(Series2)
+        Me.grafico_normal.Size = New System.Drawing.Size(1158, 499)
+        Me.grafico_normal.TabIndex = 84
+        Me.grafico_normal.Text = "Chart1"
         '
-        'dtgNormal
+        'btn_limpiar
         '
-        Me.dtgNormal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dtgNormal.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.intervalos, Me.z, Me.fo, Me.Column1, Me.probabilidad, Me.fe})
-        Me.dtgNormal.Location = New System.Drawing.Point(29, 138)
-        Me.dtgNormal.Margin = New System.Windows.Forms.Padding(4)
-        Me.dtgNormal.Name = "dtgNormal"
-        Me.dtgNormal.ReadOnly = True
-        Me.dtgNormal.Size = New System.Drawing.Size(642, 190)
-        Me.dtgNormal.TabIndex = 58
+        Me.btn_limpiar.BackColor = System.Drawing.Color.LavenderBlush
+        Me.btn_limpiar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_limpiar.ForeColor = System.Drawing.Color.MediumOrchid
+        Me.btn_limpiar.Location = New System.Drawing.Point(1329, 686)
+        Me.btn_limpiar.Name = "btn_limpiar"
+        Me.btn_limpiar.Size = New System.Drawing.Size(116, 67)
+        Me.btn_limpiar.TabIndex = 88
+        Me.btn_limpiar.Text = "Limpiar"
+        Me.btn_limpiar.UseVisualStyleBackColor = False
         '
-        'intervalos
+        'btn_generar
         '
-        Me.intervalos.HeaderText = "Intervalos"
-        Me.intervalos.Name = "intervalos"
-        Me.intervalos.ReadOnly = True
-        Me.intervalos.Width = 80
+        Me.btn_generar.BackColor = System.Drawing.Color.LavenderBlush
+        Me.btn_generar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_generar.ForeColor = System.Drawing.Color.MediumOrchid
+        Me.btn_generar.Location = New System.Drawing.Point(1329, 622)
+        Me.btn_generar.Name = "btn_generar"
+        Me.btn_generar.Size = New System.Drawing.Size(116, 67)
+        Me.btn_generar.TabIndex = 87
+        Me.btn_generar.Text = "Generar"
+        Me.btn_generar.UseVisualStyleBackColor = False
         '
-        'z
+        'grilla_numeros_aleatorios
         '
-        Me.z.HeaderText = "m, Clase"
-        Me.z.Name = "z"
-        Me.z.ReadOnly = True
-        '
-        'fo
-        '
-        Me.fo.HeaderText = "Frecuencia Observada"
-        Me.fo.Name = "fo"
-        Me.fo.ReadOnly = True
-        '
-        'Column1
-        '
-        Me.Column1.HeaderText = "F(mac)"
-        Me.Column1.Name = "Column1"
-        Me.Column1.ReadOnly = True
-        Me.Column1.Width = 80
-        '
-        'probabilidad
-        '
-        Me.probabilidad.HeaderText = "Probabilidad"
-        Me.probabilidad.Name = "probabilidad"
-        Me.probabilidad.ReadOnly = True
-        '
-        'fe
-        '
-        Me.fe.HeaderText = "Frecuencia Esperada"
-        Me.fe.Name = "fe"
-        Me.fe.ReadOnly = True
-        '
-        'dtgXiCuadradoNormal
-        '
-        Me.dtgXiCuadradoNormal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dtgXiCuadradoNormal.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn9, Me.xiCuadradoNormal})
-        Me.dtgXiCuadradoNormal.Location = New System.Drawing.Point(718, 138)
-        Me.dtgXiCuadradoNormal.Margin = New System.Windows.Forms.Padding(4)
-        Me.dtgXiCuadradoNormal.Name = "dtgXiCuadradoNormal"
-        Me.dtgXiCuadradoNormal.ReadOnly = True
-        Me.dtgXiCuadradoNormal.Size = New System.Drawing.Size(470, 188)
-        Me.dtgXiCuadradoNormal.TabIndex = 59
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.HeaderText = "Intervalos"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        Me.DataGridViewTextBoxColumn3.ReadOnly = True
-        Me.DataGridViewTextBoxColumn3.Width = 80
-        '
-        'DataGridViewTextBoxColumn7
-        '
-        Me.DataGridViewTextBoxColumn7.HeaderText = "Frecuencia Observada"
-        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
-        Me.DataGridViewTextBoxColumn7.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn9
-        '
-        Me.DataGridViewTextBoxColumn9.HeaderText = "Frecuencia Esperada"
-        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
-        Me.DataGridViewTextBoxColumn9.ReadOnly = True
-        '
-        'xiCuadradoNormal
-        '
-        Me.xiCuadradoNormal.HeaderText = "((fo-fe)^2)/fe"
-        Me.xiCuadradoNormal.Name = "xiCuadradoNormal"
-        Me.xiCuadradoNormal.ReadOnly = True
-        '
-        'Chart1
-        '
-        ChartArea3.Name = "ChartArea1"
-        Me.Chart1.ChartAreas.Add(ChartArea3)
-        Legend3.Name = "Legend1"
-        Me.Chart1.Legends.Add(Legend3)
-        Me.Chart1.Location = New System.Drawing.Point(45, 354)
-        Me.Chart1.Name = "Chart1"
-        Me.Chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Berry
-        Series5.ChartArea = "ChartArea1"
-        Series5.Legend = "Legend1"
-        Series5.Name = "Frecuencia Ovservada"
-        Series6.ChartArea = "ChartArea1"
-        Series6.Legend = "Legend1"
-        Series6.Name = "Frecuencia Espedara"
-        Me.Chart1.Series.Add(Series5)
-        Me.Chart1.Series.Add(Series6)
-        Me.Chart1.Size = New System.Drawing.Size(1158, 499)
-        Me.Chart1.TabIndex = 84
-        Me.Chart1.Text = "Chart1"
-        '
-        'Button2
-        '
-        Me.Button2.BackColor = System.Drawing.Color.LavenderBlush
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.Color.MediumOrchid
-        Me.Button2.Location = New System.Drawing.Point(1329, 686)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(116, 67)
-        Me.Button2.TabIndex = 88
-        Me.Button2.Text = "Limpiar"
-        Me.Button2.UseVisualStyleBackColor = False
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.LavenderBlush
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.MediumOrchid
-        Me.Button1.Location = New System.Drawing.Point(1329, 622)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(116, 67)
-        Me.Button1.TabIndex = 87
-        Me.Button1.Text = "Generar"
-        Me.Button1.UseVisualStyleBackColor = False
-        '
-        'DataGridView1
-        '
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.Column2})
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle6
-        Me.DataGridView1.Location = New System.Drawing.Point(1308, 138)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(192, 468)
-        Me.DataGridView1.TabIndex = 89
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.grilla_numeros_aleatorios.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.grilla_numeros_aleatorios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.grilla_numeros_aleatorios.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.Column2})
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.grilla_numeros_aleatorios.DefaultCellStyle = DataGridViewCellStyle2
+        Me.grilla_numeros_aleatorios.Location = New System.Drawing.Point(1308, 138)
+        Me.grilla_numeros_aleatorios.Name = "grilla_numeros_aleatorios"
+        Me.grilla_numeros_aleatorios.RowTemplate.Height = 24
+        Me.grilla_numeros_aleatorios.Size = New System.Drawing.Size(192, 468)
+        Me.grilla_numeros_aleatorios.TabIndex = 89
         '
         'DataGridViewTextBoxColumn1
         '
@@ -316,16 +268,150 @@ Partial Class Normal
         Me.Column2.Name = "Column2"
         Me.Column2.Width = 50
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(967, 623)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(130, 17)
+        Me.Label3.TabIndex = 90
+        Me.Label3.Text = "Grados de libertad:"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(1103, 623)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(0, 17)
+        Me.Label4.TabIndex = 90
+        '
+        'lbl_grados_libertad
+        '
+        Me.lbl_grados_libertad.AutoSize = True
+        Me.lbl_grados_libertad.Location = New System.Drawing.Point(1103, 623)
+        Me.lbl_grados_libertad.Name = "lbl_grados_libertad"
+        Me.lbl_grados_libertad.Size = New System.Drawing.Size(24, 17)
+        Me.lbl_grados_libertad.TabIndex = 90
+        Me.lbl_grados_libertad.Text = "00"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(967, 686)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(160, 17)
+        Me.Label6.TabIndex = 90
+        Me.Label6.Text = "Chi cuadrado calculado:"
+        '
+        'lbl_chi_cuadrado_calculado
+        '
+        Me.lbl_chi_cuadrado_calculado.AutoSize = True
+        Me.lbl_chi_cuadrado_calculado.Location = New System.Drawing.Point(1133, 686)
+        Me.lbl_chi_cuadrado_calculado.Name = "lbl_chi_cuadrado_calculado"
+        Me.lbl_chi_cuadrado_calculado.Size = New System.Drawing.Size(24, 17)
+        Me.lbl_chi_cuadrado_calculado.TabIndex = 90
+        Me.lbl_chi_cuadrado_calculado.Text = "00"
+        '
+        'xiCuadradoNormal
+        '
+        Me.xiCuadradoNormal.HeaderText = "((fo-fe)^2)/fe"
+        Me.xiCuadradoNormal.Name = "xiCuadradoNormal"
+        Me.xiCuadradoNormal.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn9
+        '
+        Me.DataGridViewTextBoxColumn9.HeaderText = "Frecuencia Esperada"
+        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
+        Me.DataGridViewTextBoxColumn9.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn7
+        '
+        Me.DataGridViewTextBoxColumn7.HeaderText = "Frecuencia Observada"
+        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
+        Me.DataGridViewTextBoxColumn7.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.HeaderText = "Intervalos"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.ReadOnly = True
+        Me.DataGridViewTextBoxColumn3.Width = 80
+        '
+        'dtgXiCuadradoNormal
+        '
+        Me.dtgXiCuadradoNormal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dtgXiCuadradoNormal.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn9, Me.xiCuadradoNormal})
+        Me.dtgXiCuadradoNormal.Location = New System.Drawing.Point(718, 138)
+        Me.dtgXiCuadradoNormal.Margin = New System.Windows.Forms.Padding(4)
+        Me.dtgXiCuadradoNormal.Name = "dtgXiCuadradoNormal"
+        Me.dtgXiCuadradoNormal.ReadOnly = True
+        Me.dtgXiCuadradoNormal.Size = New System.Drawing.Size(470, 188)
+        Me.dtgXiCuadradoNormal.TabIndex = 59
+        '
+        'fe
+        '
+        Me.fe.HeaderText = "Frecuencia Esperada"
+        Me.fe.Name = "fe"
+        Me.fe.ReadOnly = True
+        '
+        'probabilidad
+        '
+        Me.probabilidad.HeaderText = "Probabilidad"
+        Me.probabilidad.Name = "probabilidad"
+        Me.probabilidad.ReadOnly = True
+        '
+        'Column1
+        '
+        Me.Column1.HeaderText = "F(mac)"
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        Me.Column1.Width = 80
+        '
+        'fo
+        '
+        Me.fo.HeaderText = "Frecuencia Observada"
+        Me.fo.Name = "fo"
+        Me.fo.ReadOnly = True
+        '
+        'z
+        '
+        Me.z.HeaderText = "m, Clase"
+        Me.z.Name = "z"
+        Me.z.ReadOnly = True
+        '
+        'intervalos
+        '
+        Me.intervalos.HeaderText = "Intervalos"
+        Me.intervalos.Name = "intervalos"
+        Me.intervalos.ReadOnly = True
+        Me.intervalos.Width = 80
+        '
+        'dtgNormal
+        '
+        Me.dtgNormal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dtgNormal.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.intervalos, Me.z, Me.fo, Me.Column1, Me.probabilidad, Me.fe})
+        Me.dtgNormal.Location = New System.Drawing.Point(29, 138)
+        Me.dtgNormal.Margin = New System.Windows.Forms.Padding(4)
+        Me.dtgNormal.Name = "dtgNormal"
+        Me.dtgNormal.ReadOnly = True
+        Me.dtgNormal.Size = New System.Drawing.Size(642, 190)
+        Me.dtgNormal.TabIndex = 58
+        '
         'Normal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.ClientSize = New System.Drawing.Size(1580, 890)
-        Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.Chart1)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.lbl_chi_cuadrado_calculado)
+        Me.Controls.Add(Me.lbl_grados_libertad)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.grilla_numeros_aleatorios)
+        Me.Controls.Add(Me.btn_limpiar)
+        Me.Controls.Add(Me.btn_generar)
+        Me.Controls.Add(Me.grafico_normal)
         Me.Controls.Add(Me.dtgXiCuadradoNormal)
         Me.Controls.Add(Me.dtgNormal)
         Me.Controls.Add(Me.GroupBox1)
@@ -333,38 +419,46 @@ Partial Class Normal
         Me.Text = "Normal"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        CType(Me.dtgNormal, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.grafico_normal, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.grilla_numeros_aleatorios, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dtgXiCuadradoNormal, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Chart1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dtgNormal, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents MaskedTextBox4 As MaskedTextBox
-    Friend WithEvents MaskedTextBox3 As MaskedTextBox
-    Friend WithEvents MaskedTextBox2 As MaskedTextBox
-    Friend WithEvents MaskedTextBox1 As MaskedTextBox
+    Friend WithEvents txt_desviacion As MaskedTextBox
+    Friend WithEvents txt_media As MaskedTextBox
+    Friend WithEvents txt_cant_numeros As MaskedTextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label8 As Label
-    Friend WithEvents dtgNormal As DataGridView
-    Friend WithEvents intervalos As DataGridViewTextBoxColumn
-    Friend WithEvents z As DataGridViewTextBoxColumn
-    Friend WithEvents fo As DataGridViewTextBoxColumn
-    Friend WithEvents Column1 As DataGridViewTextBoxColumn
-    Friend WithEvents probabilidad As DataGridViewTextBoxColumn
-    Friend WithEvents fe As DataGridViewTextBoxColumn
-    Friend WithEvents dtgXiCuadradoNormal As DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn7 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn9 As DataGridViewTextBoxColumn
-    Friend WithEvents xiCuadradoNormal As DataGridViewTextBoxColumn
-    Friend WithEvents Chart1 As DataVisualization.Charting.Chart
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button1 As Button
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents grafico_normal As DataVisualization.Charting.Chart
+    Friend WithEvents btn_limpiar As Button
+    Friend WithEvents btn_generar As Button
+    Friend WithEvents grilla_numeros_aleatorios As DataGridView
     Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents lbl_grados_libertad As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents lbl_chi_cuadrado_calculado As Label
+    Friend WithEvents rb_veinte As RadioButton
+    Friend WithEvents rb_diez As RadioButton
+    Friend WithEvents rb_cinco As RadioButton
+    Friend WithEvents xiCuadradoNormal As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn9 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn7 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
+    Friend WithEvents dtgXiCuadradoNormal As DataGridView
+    Friend WithEvents fe As DataGridViewTextBoxColumn
+    Friend WithEvents probabilidad As DataGridViewTextBoxColumn
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents fo As DataGridViewTextBoxColumn
+    Friend WithEvents z As DataGridViewTextBoxColumn
+    Friend WithEvents intervalos As DataGridViewTextBoxColumn
+    Friend WithEvents dtgNormal As DataGridView
 End Class
