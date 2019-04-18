@@ -107,6 +107,8 @@ Public Class Uniforme
         Return bandera
     End Function
 
+
+
     Private Sub Limpiar()
         Me.txt_cant_aleatorios.Text = ""
         Me.txt_max.Text = ""
@@ -121,14 +123,20 @@ Public Class Uniforme
 
     End Sub
 
+
+
     Private Sub btn_limpiar_Click(sender As Object, e As EventArgs) Handles btn_limpiar.Click
         Limpiar()
     End Sub
+
+
 
     Private Sub Uniforme_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Location = Screen.PrimaryScreen.WorkingArea.Location
         Me.Size = Screen.PrimaryScreen.WorkingArea.Size
     End Sub
+
+
 
     Private Function Validar_campos() As Boolean
         If (Me.txt_cant_aleatorios.Text = "" Or Me.txt_min.Text = "" Or Me.txt_max.Text = "") Then

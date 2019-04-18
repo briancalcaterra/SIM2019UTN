@@ -15,8 +15,8 @@ Public Class Normal
         txt_cant_numeros.Text = ""
         txt_desviacion.Text = ""
         txt_media.Text = ""
-        dtgNormal.Rows.Clear()
-        dtgXiCuadradoNormal.Rows.Clear()
+        dgvNormal.Rows.Clear()
+        dgvXiCuadradoNormal.Rows.Clear()
         grilla_numeros_aleatorios.Rows.Clear()
         grafico_normal.Series(0).Points.Clear()
         grafico_normal.Series(1).Points.Clear()
@@ -46,9 +46,11 @@ Public Class Normal
             MsgBox("Ingrese todas las variables requeridas", MsgBoxStyle.OkOnly, "Error")
             Me.txt_cant_numeros.Focus()
         Else
-            Dim aleatorio, intervalos, fe, fila, j, est_acumulado As Double
+            Dim media, desviacion, aleatorio, intervalos, fe, fila, j, est_acumulado As Double
             Dim k, cont_frecuencia, fo As Integer
             cant_aleatorios = Me.txt_cant_numeros.Text
+            media = Me.txt_media.Text
+            desviacion = Me.txt_desviacion.Text
             Dim lista(0 To cant_aleatorios - 1) As Double
             If rb_cinco.Checked Then
                 k = 5
@@ -63,7 +65,7 @@ Public Class Normal
             Dim i As Decimal = 0
             'aca comienza el generador de numeros aleatorios
             Me.grilla_numeros_aleatorios.Rows.Clear()
-            Me.dtgXiCuadradoNormal.Rows.Clear()
+            Me.dgvXiCuadradoNormal.Rows.Clear()
             Me.grafico_normal.Series(0).Points.Clear()
             Me.grafico_normal.Series(1).Points.Clear()
 
@@ -88,19 +90,19 @@ Public Class Normal
                 grafico_normal.Series("Frecuencia Observada").Points.AddXY((j + intervalos), fo) '' aca graficamos el valor observado en el intervalo j
                 grafico_normal.Series("Frecuencia Esperada").Points.AddXY((j + intervalos), fe) ' aca graficamos el valor del esperado en el intervalo j
                 'ahora agregamos una fila en la grilla por cada uno de los intervalos generados
-                dtgXiCuadradoNormal.Rows.Add()
-                dtgXiCuadradoNormal.Rows((fila)).Cells(0).Value = j.ToString + "-" + (j + intervalos).ToString
-                dtgXiCuadradoNormal.Rows((fila)).Cells(1).Value = fo
-                dtgXiCuadradoNormal.Rows((fila)).Cells(2).Value = fe
+                dgvXiCuadradoNormal.Rows.Add()
+                dgvXiCuadradoNormal.Rows((fila)).Cells(0).Value = j.ToString + "-" + (j + intervalos).ToString
+                dgvXiCuadradoNormal.Rows((fila)).Cells(1).Value = fo
+                dgvXiCuadradoNormal.Rows((fila)).Cells(2).Value = fe
                 Dim resta As Double
                 resta = fo - fe
-                dtgXiCuadradoNormal.Rows((fila)).Cells(3).Value = resta
-                dtgXiCuadradoNormal.Rows((fila)).Cells(4).Value = resta * resta
+                dgvXiCuadradoNormal.Rows((fila)).Cells(3).Value = resta
+                dgvXiCuadradoNormal.Rows((fila)).Cells(4).Value = resta * resta
                 Dim est_calculado As Double
                 est_calculado = (resta * resta) / fe
-                dtgXiCuadradoNormal.Rows((fila)).Cells(5).Value = est_calculado
+                dgvXiCuadradoNormal.Rows((fila)).Cells(5).Value = est_calculado
                 est_acumulado += est_calculado
-                dtgXiCuadradoNormal.Rows((fila)).Cells(6).Value = est_acumulado
+                dgvXiCuadradoNormal.Rows((fila)).Cells(6).Value = est_acumulado
                 fila += 1
             Next
             'grilla_chi_cuadrado.Rows.Add()
@@ -124,6 +126,7 @@ Public Class Normal
     End Sub
 
     Private Sub Normal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        Me.Location = Screen.PrimaryScreen.WorkingArea.Location
+        Me.Size = Screen.PrimaryScreen.WorkingArea.Size
     End Sub
 End Class
