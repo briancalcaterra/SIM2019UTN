@@ -32,7 +32,11 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
+<<<<<<< HEAD
             Me.MainForm = Global.TrabajoPractico3_Sim.Normal
+=======
+            Me.MainForm = Global.TrabajoPractico3_Sim.Exponencial
+>>>>>>> 14f31e57da6e3a5f4f5a9f07c063b3abe20b3ee1
         End Sub
     End Class
 End Namespace
